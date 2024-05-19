@@ -106,6 +106,9 @@ namespace SistemaDeAprendizaje
                                 if (BCrypt.Net.BCrypt.Verify(contraseñaIngresada, contraseñaHash))
                                 {
                                     MessageBox.Show("Inicio de sesión exitoso");
+                                    this.Hide();
+                                    FormInicio formInicio = new FormInicio();
+                                    formInicio.Show();
                                 }
                                 else
                                 {
