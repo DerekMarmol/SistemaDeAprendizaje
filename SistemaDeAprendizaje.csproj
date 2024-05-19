@@ -89,6 +89,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSegundo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSegundo.Designer.cs">
+      <DependentUpon>FormSegundo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
