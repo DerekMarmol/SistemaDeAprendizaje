@@ -1,0 +1,11 @@
+﻿CREATE TABLE Usuarios (
+    UsuarioID INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(50) NOT NULL,
+    Apellido NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    Contraseña NVARCHAR(255) NOT NULL,
+    FotoPerfil NVARCHAR(255),
+    FechaRegistro DATETIME DEFAULT GETDATE()
+);
+
+
