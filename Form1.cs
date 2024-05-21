@@ -13,6 +13,19 @@ namespace SistemaDeAprendizaje
         public FormRegistro()
         {
             InitializeComponent();
+            txtContraseña.PasswordChar = '*';
+
+            lblNombre.BackColor = Color.Transparent;
+            lblNombre.Parent = pictureBoxFondo;
+
+            lblApellido.BackColor = Color.Transparent;
+            lblApellido.Parent = pictureBoxFondo;
+
+            lblEmail.BackColor = Color.Transparent;
+            lblEmail.Parent = pictureBoxFondo;
+
+            lblContraseña.BackColor = Color.Transparent;
+            lblContraseña.Parent = pictureBoxFondo;
         }
 
         private void lblNombre_Click(object sender, EventArgs e)
@@ -90,7 +103,7 @@ namespace SistemaDeAprendizaje
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Contraseña FROM Usuarios WHERE Email = @Email";
+                string query = "SELECT Nombre, Apellido, Email, Contraseña FROM Usuarios WHERE Email = @Email";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Email", email);
@@ -102,12 +115,18 @@ namespace SistemaDeAprendizaje
                         {
                             if (reader.Read())
                             {
-                                string contraseñaHash = reader.GetString(0);
+                                string contraseñaHash = reader.GetString(3);
                                 if (BCrypt.Net.BCrypt.Verify(contraseñaIngresada, contraseñaHash))
                                 {
                                     MessageBox.Show("Inicio de sesión exitoso");
                                     this.Hide();
+
+                                    // Crear una instancia del formulario de inicio y asignar los datos a las etiquetas
                                     FormInicio formInicio = new FormInicio();
+                                    formInicio.SetPerfilNombre(reader.GetString(0)); // Nombre
+                                    formInicio.SetPerfilApellido(reader.GetString(1)); // Apellido
+                                    formInicio.SetPerfilCorreo(reader.GetString(2)); // Email
+
                                     formInicio.Show();
                                 }
                                 else
@@ -134,5 +153,10 @@ namespace SistemaDeAprendizaje
             }
         }
 
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistro));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -39,12 +38,14 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxFondo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Location = new System.Drawing.Point(271, 38);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(243, 20);
@@ -52,9 +53,13 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblNombre.Location = new System.Drawing.Point(205, 45);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
@@ -64,6 +69,8 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Location = new System.Drawing.Point(271, 98);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(243, 20);
@@ -71,6 +78,9 @@
             // 
             // lblApellido
             // 
+            this.lblApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblApellido.AutoSize = true;
             this.lblApellido.BackColor = System.Drawing.Color.Transparent;
             this.lblApellido.Location = new System.Drawing.Point(205, 105);
@@ -81,6 +91,8 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(271, 154);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(243, 20);
@@ -88,15 +100,21 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(205, 157);
+            this.lblEmail.Location = new System.Drawing.Point(214, 161);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "E-mail";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseña.Location = new System.Drawing.Point(271, 215);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(243, 20);
@@ -104,6 +122,9 @@
             // 
             // lblContraseña
             // 
+            this.lblContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseña.Location = new System.Drawing.Point(193, 222);
@@ -114,6 +135,7 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -127,6 +149,7 @@
             // 
             // btnIniciarSesion
             // 
+            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnIniciarSesion.Location = new System.Drawing.Point(409, 293);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
@@ -136,19 +159,24 @@
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // pictureBox1
+            // pictureBoxFondo
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(799, 451);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxFondo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFondo.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBoxFondo.Location = new System.Drawing.Point(0, -1);
+            this.pictureBoxFondo.Name = "pictureBoxFondo";
+            this.pictureBoxFondo.Size = new System.Drawing.Size(799, 451);
+            this.pictureBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxFondo.TabIndex = 10;
+            this.pictureBoxFondo.TabStop = false;
             // 
             // FormRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.btnRegistrar);
@@ -160,10 +188,10 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxFondo);
             this.Name = "FormRegistro";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +209,7 @@
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxFondo;
     }
 }
 
