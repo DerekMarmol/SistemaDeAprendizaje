@@ -158,5 +158,10 @@ namespace SistemaDeAprendizaje
         {
 
         }
+
+        private void pictureBoxFondo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

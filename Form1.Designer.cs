@@ -171,6 +171,7 @@
             this.pictureBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxFondo.TabIndex = 10;
             this.pictureBoxFondo.TabStop = false;
+            this.pictureBoxFondo.Click += new System.EventHandler(this.pictureBoxFondo_Click);
             // 
             // FormRegistro
             // 
