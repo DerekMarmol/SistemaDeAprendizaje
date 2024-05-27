@@ -139,17 +139,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAgregarEditarCurso.cs">
+    <Compile Include="FormAgregarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgregarEditarCurso.Designer.cs">
-      <DependentUpon>FormAgregarEditarCurso.cs</DependentUpon>
+    <Compile Include="FormAgregarCurso.Designer.cs">
+      <DependentUpon>FormAgregarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCatalogoCursos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCatalogoCursos.Designer.cs">
       <DependentUpon>FormCatalogoCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCurso.Designer.cs">
+      <DependentUpon>FormEditarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditarPerfil.cs">
       <SubType>Form</SubType>
@@ -167,6 +173,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarCurso.resx">
+      <DependentUpon>FormAgregarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCatalogoCursos.resx">
       <DependentUpon>FormCatalogoCursos.cs</DependentUpon>

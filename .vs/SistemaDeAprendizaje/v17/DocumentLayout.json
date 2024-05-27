@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 318,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,20 +42,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormAgregarCurso.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAgregarCurso.cs",
+              "RelativeDocumentMoniker": "FormAgregarCurso.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAgregarCurso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormAgregarCurso.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:31:17.644Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormAgregarCurso.cs",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAgregarCurso.cs",
+              "RelativeDocumentMoniker": "FormAgregarCurso.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAgregarCurso.cs",
+              "RelativeToolTip": "FormAgregarCurso.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAwDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T22:16:52.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormCatalogoCursos.cs",
               "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeDocumentMoniker": "FormCatalogoCursos.cs",
               "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeToolTip": "FormCatalogoCursos.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAvwHQAAAARAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAowE4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-27T21:04:18.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FormCatalogoCursos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeDocumentMoniker": "FormCatalogoCursos.cs",

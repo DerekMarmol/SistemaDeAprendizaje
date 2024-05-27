@@ -51,3 +51,4 @@ C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\bin\Debug\SistemaDeAprendizaje.
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\bin\Debug\SistemaDeAprendizaje.application
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.exe.manifest
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.application
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormAgregarCurso.resources

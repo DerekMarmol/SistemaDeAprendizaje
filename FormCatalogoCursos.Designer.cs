@@ -33,8 +33,8 @@
             this.btnAgregarCurso = new System.Windows.Forms.Button();
             this.btnEditarCurso = new System.Windows.Forms.Button();
             this.btnEliminarCurso = new System.Windows.Forms.Button();
-            this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,13 +83,13 @@
             this.btnEliminarCurso.UseVisualStyleBackColor = true;
             this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
             // 
-            // dataGridViewCursos
+            // dataGridView1
             // 
-            this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCursos.Location = new System.Drawing.Point(173, 62);
-            this.dataGridViewCursos.Name = "dataGridViewCursos";
-            this.dataGridViewCursos.Size = new System.Drawing.Size(477, 352);
-            this.dataGridViewCursos.TabIndex = 6;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(199, 84);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(442, 327);
+            this.dataGridView1.TabIndex = 6;
             // 
             // FormCatalogoCursos
             // 
@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridViewCursos);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminarCurso);
             this.Controls.Add(this.btnEditarCurso);
             this.Controls.Add(this.btnAgregarCurso);
@@ -106,7 +106,7 @@
             this.Name = "FormCatalogoCursos";
             this.Text = "FormCatalogoCursos";
             this.Load += new System.EventHandler(this.FormCatalogoCursos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +119,6 @@
         private System.Windows.Forms.Button btnAgregarCurso;
         private System.Windows.Forms.Button btnEditarCurso;
         private System.Windows.Forms.Button btnEliminarCurso;
-        private System.Windows.Forms.DataGridView dataGridViewCursos;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

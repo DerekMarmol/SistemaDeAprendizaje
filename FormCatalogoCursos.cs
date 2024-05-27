@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient; // Asegúrate de agregar esta referencia
 
 namespace SistemaDeAprendizaje
 {
     public partial class FormCatalogoCursos : Form
     {
         // Cadena de conexión a tu base de datos MySQL
-        string connectionString = "Server=your_server;Database=your_database;Uid=your_username;Pwd=your_password;";
+        string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
 
         public FormCatalogoCursos()
         {
@@ -23,108 +23,57 @@ namespace SistemaDeAprendizaje
 
         private void CargarCursosEnDataGridView()
         {
-            // Consulta SQL para seleccionar todos los cursos
-            string query = "SELECT * FROM Cursos";
-
-            // Crear un DataTable para almacenar los datos de la consulta
-            DataTable dataTable = new DataTable();
-
-            // Crear una conexión y un adaptador de datos
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                try
-                {
-                    // Abrir la conexión y llenar el DataTable con los datos de la consulta
-                    connection.Open();
-                    adapter.Fill(dataTable);
-                }
-                catch (Exception ex)
-                {
-                    // Manejar cualquier error que ocurra durante la consulta
-                    MessageBox.Show("Error al cargar los cursos: " + ex.Message);
-                }
-            }
+                string query = "SELECT CursoID, NombreCurso, Descripcion, Duracion, Instructor, FechaInicio, FechaFin FROM Cursos";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
 
-            // Enlazar el DataTable al DataGridView
-            dataGridViewCursos.DataSource = dataTable;
+                dataGridView1.DataSource = dataTable;
+            }
         }
 
         private void btnAgregarCurso_Click(object sender, EventArgs e)
         {
-            // Abrir el formulario para agregar un nuevo curso
-            FormAgregarEditarCurso formAgregarCurso = new FormAgregarEditarCurso();
-            if (formAgregarCurso.ShowDialog() == DialogResult.OK)
-            {
-                // Recargar los datos en el DataGridView después de agregar el curso
-                CargarCursosEnDataGridView();
-            }
+            // Abre el formulario para agregar un nuevo curso
+            FormAgregarCurso formAgregarCurso = new FormAgregarCurso();
+            formAgregarCurso.ShowDialog();
+
+            // Actualiza los datos en el DataGridView después de agregar un curso
+            CargarCursosEnDataGridView();
         }
 
         private void btnEditarCurso_Click(object sender, EventArgs e)
         {
-            // Verificar si se ha seleccionado un curso en el DataGridView
-            if (dataGridViewCursos.SelectedRows.Count > 0)
-            {
-                // Obtener el ID del curso seleccionado
-                int cursoID = Convert.ToInt32(dataGridViewCursos.SelectedRows[0].Cells["CursoID"].Value);
+            // Obtén el ID del curso seleccionado en el DataGridView
+            int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
 
-                // Abrir el formulario para editar el curso seleccionado
-                FormAgregarEditarCurso formEditarCurso = new FormAgregarEditarCurso(cursoID);
-                if (formEditarCurso.ShowDialog() == DialogResult.OK)
-                {
-                    // Recargar los datos en el DataGridView después de editar el curso
-                    CargarCursosEnDataGridView();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione un curso para editar.");
-            }
+            // Abre el formulario para editar el curso con el ID correspondiente
+            FormEditarCurso formEditarCurso = new FormEditarCurso(cursoID);
+            formEditarCurso.ShowDialog();
+
+            // Actualiza los datos en el DataGridView después de editar el curso
+            CargarCursosEnDataGridView();
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            // Verificar si se ha seleccionado un curso en el DataGridView
-            if (dataGridViewCursos.SelectedRows.Count > 0)
-            {
-                // Obtener el ID del curso seleccionado
-                int cursoID = Convert.ToInt32(dataGridViewCursos.SelectedRows[0].Cells["CursoID"].Value);
+            // Obtén el ID del curso seleccionado en el DataGridView
+            int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
 
-                // Confirmar la eliminación con un mensaje al usuario
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este curso?", "Confirmar eliminación", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    // Ejecutar la consulta para eliminar el curso de la base de datos
-                    string query = "DELETE FROM Cursos WHERE CursoID = @CursoID";
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@CursoID", cursoID);
-                        try
-                        {
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("Curso eliminado correctamente.");
-                            // Recargar los datos en el DataGridView después de eliminar el curso
-                            CargarCursosEnDataGridView();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error al eliminar el curso: " + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
+            // Elimina el curso con el ID correspondiente de la base de datos
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                MessageBox.Show("Por favor, seleccione un curso para eliminar.");
+                connection.Open();
+                string deleteQuery = "DELETE FROM Cursos WHERE CursoID = @CursoID";
+                MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection);
+                deleteCommand.Parameters.AddWithValue("@CursoID", cursoID);
+                deleteCommand.ExecuteNonQuery();
             }
-        }
 
-        private void dataGridViewCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Puedes manejar eventos en el DataGridView si es necesario
+            // Actualiza los datos en el DataGridView después de eliminar el curso
+            CargarCursosEnDataGridView();
         }
     }
 }

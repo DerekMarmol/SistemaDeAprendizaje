@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaDeAprendizaje
 {
-    public partial class FormAgregarEditarCurso : Form
+    public partial class FormEditarCurso : Form
     {
         private int cursoID;
 
-        public FormAgregarEditarCurso()
+        public FormEditarCurso()
         {
             InitializeComponent();
         }
 
-        public FormAgregarEditarCurso(int cursoID)
+        public FormEditarCurso(int cursoID)
         {
             this.cursoID = cursoID;
         }
