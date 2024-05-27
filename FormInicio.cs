@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SistemaDeAprendizaje
 {
@@ -32,7 +29,6 @@ namespace SistemaDeAprendizaje
             lblPerfilCorreo.Text = correo;
         }
 
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -54,8 +50,27 @@ namespace SistemaDeAprendizaje
 
                     try
                     {
-                        // Carga la imagen en la PictureBox
-                        pictureBoxImage.Image = Image.FromFile(filePath);
+                        // Carga y redimensiona la imagen
+                        Image imagenOriginal = Image.FromFile(filePath);
+                        Image imagenRedimensionada = RedimensionarImagen(imagenOriginal, 150, 139);
+
+                        // Guarda la imagen redimensionada en el PictureBox
+                        pictureBoxImage.Image = imagenRedimensionada;
+
+                        // Guardar la imagen redimensionada en una carpeta local
+                        string rutaGuardado = Path.Combine(Application.StartupPath, "ImagenesPerfil");
+                        if (!Directory.Exists(rutaGuardado))
+                        {
+                            Directory.CreateDirectory(rutaGuardado);
+                        }
+
+                        string rutaImagen = Path.Combine(rutaGuardado, $"{Guid.NewGuid()}.png");
+                        imagenRedimensionada.Save(rutaImagen, System.Drawing.Imaging.ImageFormat.Png);
+
+                        // Actualizar la base de datos con la ruta de la imagen
+                        ActualizarImagenPerfilEnBaseDeDatos(lblPerfilCorreo.Text, rutaImagen);
+
+                        MessageBox.Show("Imagen guardada y actualizada con éxito.");
                     }
                     catch (Exception ex)
                     {
@@ -63,6 +78,47 @@ namespace SistemaDeAprendizaje
                     }
                 }
             }
+        }
+
+        private void ActualizarImagenPerfilEnBaseDeDatos(string correo, string rutaImagen)
+        {
+            string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "UPDATE Usuarios SET FotoPerfil = @FotoPerfil WHERE Email = @Email";
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@FotoPerfil", rutaImagen);
+                    command.Parameters.AddWithValue("@Email", correo);
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al actualizar la base de datos: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                            connection.Close();
+                    }
+                }
+            }
+        }
+
+        private Image RedimensionarImagen(Image imagenOriginal, int ancho, int alto)
+        {
+            Bitmap imagenRedimensionada = new Bitmap(ancho, alto);
+            using (Graphics g = Graphics.FromImage(imagenRedimensionada))
+            {
+                g.DrawImage(imagenOriginal, 0, 0, ancho, alto);
+            }
+            return imagenRedimensionada;
         }
 
         private void FormInicio_Load(object sender, EventArgs e)
@@ -84,6 +140,25 @@ namespace SistemaDeAprendizaje
 
                 // Aquí deberías agregar el código para actualizar la base de datos con los nuevos valores
                 // ...
+            }
+        }
+
+        private void lblPerfilNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+                FormCatalogoCursos formCatalogo = new FormCatalogoCursos();
+                formCatalogo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
     }

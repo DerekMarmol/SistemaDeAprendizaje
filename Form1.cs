@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using BCrypt.Net;
-
 
 namespace SistemaDeAprendizaje
 {
@@ -30,7 +29,20 @@ namespace SistemaDeAprendizaje
 
         private void lblNombre_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private bool EsEmailValido(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -38,19 +50,37 @@ namespace SistemaDeAprendizaje
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string email = txtEmail.Text;
-            string contraseña = BCrypt.Net.BCrypt.HashPassword(txtContraseña.Text);
+            string contraseña = txtContraseña.Text;
 
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+            // Verificar si algún campo está vacío
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) ||
+                string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contraseña))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Validar formato de email
+            if (!EsEmailValido(email))
+            {
+                MessageBox.Show("El formato del correo electrónico no es válido.");
+                return;
+            }
+
+            // Hash de la contraseña
+            string contraseñaHash = BCrypt.Net.BCrypt.HashPassword(contraseña);
+
+            string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 // Verificar si el correo electrónico ya está registrado
                 string checkEmailQuery = "SELECT COUNT(*) FROM Usuarios WHERE Email = @Email";
-                using (SqlCommand checkEmailCommand = new SqlCommand(checkEmailQuery, connection))
+                using (MySqlCommand checkEmailCommand = new MySqlCommand(checkEmailQuery, connection))
                 {
                     checkEmailCommand.Parameters.AddWithValue("@Email", email);
                     connection.Open();
-                    int count = (int)checkEmailCommand.ExecuteScalar();
+                    int count = Convert.ToInt32(checkEmailCommand.ExecuteScalar());
 
                     if (count > 0)
                     {
@@ -62,12 +92,12 @@ namespace SistemaDeAprendizaje
                 // Si no está registrado, proceder a registrar al nuevo usuario
                 string query = "INSERT INTO Usuarios (Nombre, Apellido, Email, Contraseña) VALUES (@Nombre, @Apellido, @Email, @Contraseña)";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
                     command.Parameters.AddWithValue("@Apellido", apellido);
                     command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Contraseña", contraseña);
+                    command.Parameters.AddWithValue("@Contraseña", contraseñaHash);
 
                     try
                     {
@@ -79,7 +109,6 @@ namespace SistemaDeAprendizaje
                             connection.Close();
 
                         return;
-
                     }
                     catch (Exception ex)
                     {
@@ -100,18 +129,25 @@ namespace SistemaDeAprendizaje
             string email = txtEmail.Text;
             string contraseñaIngresada = txtContraseña.Text;
 
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Verificar si algún campo está vacío
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contraseñaIngresada))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT Nombre, Apellido, Email, Contraseña FROM Usuarios WHERE Email = @Email";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Email", email);
 
                     try
                     {
                         connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
@@ -152,7 +188,6 @@ namespace SistemaDeAprendizaje
                 }
             }
         }
-
 
         private void lblEmail_Click(object sender, EventArgs e)
         {

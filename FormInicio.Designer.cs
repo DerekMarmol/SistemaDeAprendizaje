@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCambiarImagen = new System.Windows.Forms.Button();
             this.lblInformacion = new System.Windows.Forms.Label();
             this.lblInfoNombre = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.lblPerfilCorreo = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxImage
@@ -55,10 +57,21 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 426);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Catalogo De Cursos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnCambiarImagen
             // 
@@ -118,9 +131,9 @@
             this.lblPerfilNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfilNombre.Location = new System.Drawing.Point(311, 73);
             this.lblPerfilNombre.Name = "lblPerfilNombre";
-            this.lblPerfilNombre.Size = new System.Drawing.Size(15, 20);
+            this.lblPerfilNombre.Size = new System.Drawing.Size(0, 20);
             this.lblPerfilNombre.TabIndex = 7;
-            this.lblPerfilNombre.Text = "f";
+            this.lblPerfilNombre.Click += new System.EventHandler(this.lblPerfilNombre_Click);
             // 
             // lblPerfilApellido
             // 
@@ -128,9 +141,8 @@
             this.lblPerfilApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfilApellido.Location = new System.Drawing.Point(311, 131);
             this.lblPerfilApellido.Name = "lblPerfilApellido";
-            this.lblPerfilApellido.Size = new System.Drawing.Size(15, 20);
+            this.lblPerfilApellido.Size = new System.Drawing.Size(0, 20);
             this.lblPerfilApellido.TabIndex = 8;
-            this.lblPerfilApellido.Text = "f";
             // 
             // lblPerfilCorreo
             // 
@@ -138,9 +150,8 @@
             this.lblPerfilCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfilCorreo.Location = new System.Drawing.Point(311, 179);
             this.lblPerfilCorreo.Name = "lblPerfilCorreo";
-            this.lblPerfilCorreo.Size = new System.Drawing.Size(15, 20);
+            this.lblPerfilCorreo.Size = new System.Drawing.Size(0, 20);
             this.lblPerfilCorreo.TabIndex = 9;
-            this.lblPerfilCorreo.Text = "f";
             // 
             // btnEditar
             // 
@@ -173,6 +184,7 @@
             this.Text = "FormInicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label lblPerfilApellido;
         private System.Windows.Forms.Label lblPerfilCorreo;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button button1;
     }
 }
