@@ -34,6 +34,9 @@
             this.btnEditarCurso = new System.Windows.Forms.Button();
             this.btnEliminarCurso = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrarCurso = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(4, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(144, 426);
@@ -72,6 +76,7 @@
             this.btnEditarCurso.TabIndex = 4;
             this.btnEditarCurso.Text = "Editar Curso";
             this.btnEditarCurso.UseVisualStyleBackColor = true;
+            this.btnEditarCurso.Click += new System.EventHandler(this.btnEditarCurso_Click_1);
             // 
             // btnEliminarCurso
             // 
@@ -91,12 +96,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(442, 327);
             this.dataGridView1.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Perfil De Usuario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegistrarCurso
+            // 
+            this.btnRegistrarCurso.Location = new System.Drawing.Point(685, 217);
+            this.btnRegistrarCurso.Name = "btnRegistrarCurso";
+            this.btnRegistrarCurso.Size = new System.Drawing.Size(103, 23);
+            this.btnRegistrarCurso.TabIndex = 7;
+            this.btnRegistrarCurso.Text = "Registrarse";
+            this.btnRegistrarCurso.UseVisualStyleBackColor = true;
+            this.btnRegistrarCurso.Click += new System.EventHandler(this.btnRegistrarCurso_Click);
+            // 
             // FormCatalogoCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRegistrarCurso);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminarCurso);
             this.Controls.Add(this.btnEditarCurso);
@@ -106,6 +132,7 @@
             this.Name = "FormCatalogoCursos";
             this.Text = "FormCatalogoCursos";
             this.Load += new System.EventHandler(this.FormCatalogoCursos_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,5 +147,7 @@
         private System.Windows.Forms.Button btnEditarCurso;
         private System.Windows.Forms.Button btnEliminarCurso;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrarCurso;
     }
 }

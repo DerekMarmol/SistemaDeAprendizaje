@@ -9,9 +9,18 @@ namespace SistemaDeAprendizaje
 {
     public partial class FormInicio : Form
     {
-        public FormInicio()
+        private bool esAdmin;
+        private int usuarioID;
+
+        public FormInicio(bool isAdmin, int usuarioID)
         {
             InitializeComponent();
+            this.esAdmin = isAdmin;
+            this.usuarioID = usuarioID;
+        }
+
+        public FormInicio()
+        {
         }
 
         public void SetPerfilNombre(string nombre)
@@ -45,19 +54,15 @@ namespace SistemaDeAprendizaje
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Obtiene la ruta del archivo seleccionado
                     string filePath = openFileDialog.FileName;
 
                     try
                     {
-                        // Carga y redimensiona la imagen
                         Image imagenOriginal = Image.FromFile(filePath);
                         Image imagenRedimensionada = RedimensionarImagen(imagenOriginal, 150, 139);
 
-                        // Guarda la imagen redimensionada en el PictureBox
                         pictureBoxImage.Image = imagenRedimensionada;
 
-                        // Guardar la imagen redimensionada en una carpeta local
                         string rutaGuardado = Path.Combine(Application.StartupPath, "ImagenesPerfil");
                         if (!Directory.Exists(rutaGuardado))
                         {
@@ -67,7 +72,6 @@ namespace SistemaDeAprendizaje
                         string rutaImagen = Path.Combine(rutaGuardado, $"{Guid.NewGuid()}.png");
                         imagenRedimensionada.Save(rutaImagen, System.Drawing.Imaging.ImageFormat.Png);
 
-                        // Actualizar la base de datos con la ruta de la imagen
                         ActualizarImagenPerfilEnBaseDeDatos(lblPerfilCorreo.Text, rutaImagen);
 
                         MessageBox.Show("Imagen guardada y actualizada con éxito.");
@@ -128,18 +132,12 @@ namespace SistemaDeAprendizaje
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario de edición con los valores actuales
             FormEditarPerfil formEditar = new FormEditarPerfil(lblPerfilCorreo.Text, lblPerfilNombre.Text, lblPerfilApellido.Text);
 
-            // Mostrar el formulario de edición y verificar si el usuario aceptó los cambios
             if (formEditar.ShowDialog() == DialogResult.OK)
             {
-                // Actualizar las etiquetas con los nuevos valores
                 lblPerfilNombre.Text = formEditar.Nombre;
                 lblPerfilApellido.Text = formEditar.Apellido;
-
-                // Aquí deberías agregar el código para actualizar la base de datos con los nuevos valores
-                // ...
             }
         }
 
@@ -153,13 +151,50 @@ namespace SistemaDeAprendizaje
             try
             {
                 this.Hide();
-                FormCatalogoCursos formCatalogo = new FormCatalogoCursos();
+                FormCatalogoCursos formCatalogo = new FormCatalogoCursos(esAdmin, usuarioID);
                 formCatalogo.Show();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void btnVerCursosRegistrados_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormCursosRegistrados formCursosRegistrados = new FormCursosRegistrados(usuarioID);
+                formCursosRegistrados.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void btnVerCursosRegistrados_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+                FormCursosRegistrados formCursosRegistrados = new FormCursosRegistrados(usuarioID);
+                formCursosRegistrados.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        internal void SetPerfilNombre(object value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SetPerfilCorreo(object value)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -52,7 +52,6 @@ namespace SistemaDeAprendizaje
             string email = txtEmail.Text;
             string contraseña = txtContraseña.Text;
 
-            // Verificar si algún campo está vacío
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) ||
                 string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contraseña))
             {
@@ -60,21 +59,18 @@ namespace SistemaDeAprendizaje
                 return;
             }
 
-            // Validar formato de email
             if (!EsEmailValido(email))
             {
                 MessageBox.Show("El formato del correo electrónico no es válido.");
                 return;
             }
 
-            // Hash de la contraseña
             string contraseñaHash = BCrypt.Net.BCrypt.HashPassword(contraseña);
 
             string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                // Verificar si el correo electrónico ya está registrado
                 string checkEmailQuery = "SELECT COUNT(*) FROM Usuarios WHERE Email = @Email";
                 using (MySqlCommand checkEmailCommand = new MySqlCommand(checkEmailQuery, connection))
                 {
@@ -89,8 +85,7 @@ namespace SistemaDeAprendizaje
                     }
                 }
 
-                // Si no está registrado, proceder a registrar al nuevo usuario
-                string query = "INSERT INTO Usuarios (Nombre, Apellido, Email, Contraseña) VALUES (@Nombre, @Apellido, @Email, @Contraseña)";
+                string query = "INSERT INTO Usuarios (Nombre, Apellido, Email, Contraseña, isAdmin) VALUES (@Nombre, @Apellido, @Email, @Contraseña, @IsAdmin)";
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
@@ -98,13 +93,13 @@ namespace SistemaDeAprendizaje
                     command.Parameters.AddWithValue("@Apellido", apellido);
                     command.Parameters.AddWithValue("@Email", email);
                     command.Parameters.AddWithValue("@Contraseña", contraseñaHash);
+                    command.Parameters.AddWithValue("@IsAdmin", false);
 
                     try
                     {
                         command.ExecuteNonQuery();
                         MessageBox.Show("Usuario registrado con éxito");
 
-                        // Cerrar conexión si es necesario
                         if (connection.State == ConnectionState.Open)
                             connection.Close();
 
@@ -114,7 +109,6 @@ namespace SistemaDeAprendizaje
                     {
                         MessageBox.Show("Error: " + ex.Message);
 
-                        // Cerrar conexión si es necesario
                         if (connection.State == ConnectionState.Open)
                             connection.Close();
 
@@ -129,17 +123,12 @@ namespace SistemaDeAprendizaje
             string email = txtEmail.Text;
             string contraseñaIngresada = txtContraseña.Text;
 
-            // Verificar si algún campo está vacío
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(contraseñaIngresada))
-            {
-                MessageBox.Show("Todos los campos son obligatorios.");
-                return;
-            }
-
             string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "SELECT Nombre, Apellido, Email, Contraseña FROM Usuarios WHERE Email = @Email";
+                string query = "SELECT UsuarioID, Nombre, Apellido, Email, Contraseña, isAdmin FROM Usuarios WHERE Email = @Email";
+
+
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Email", email);
@@ -151,17 +140,19 @@ namespace SistemaDeAprendizaje
                         {
                             if (reader.Read())
                             {
-                                string contraseñaHash = reader.GetString(3);
+                                string contraseñaHash = reader.GetString("Contraseña");
+                                bool isAdmin = reader.GetBoolean("isAdmin");
+                                int usuarioID = reader.GetInt32("UsuarioID");
+
                                 if (BCrypt.Net.BCrypt.Verify(contraseñaIngresada, contraseñaHash))
                                 {
                                     MessageBox.Show("Inicio de sesión exitoso");
                                     this.Hide();
 
-                                    // Crear una instancia del formulario de inicio y asignar los datos a las etiquetas
-                                    FormInicio formInicio = new FormInicio();
-                                    formInicio.SetPerfilNombre(reader.GetString(0)); // Nombre
-                                    formInicio.SetPerfilApellido(reader.GetString(1)); // Apellido
-                                    formInicio.SetPerfilCorreo(reader.GetString(2)); // Email
+                                    FormInicio formInicio = new FormInicio(isAdmin, usuarioID);
+                                    formInicio.SetPerfilNombre(reader.GetString("Nombre")); 
+                                    formInicio.SetPerfilApellido(reader.GetString("Apellido")); 
+                                    formInicio.SetPerfilCorreo(reader.GetString("Email"));
 
                                     formInicio.Show();
                                 }

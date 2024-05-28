@@ -151,6 +151,12 @@
     <Compile Include="FormCatalogoCursos.Designer.cs">
       <DependentUpon>FormCatalogoCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCursosRegistrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCursosRegistrados.Designer.cs">
+      <DependentUpon>FormCursosRegistrados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCatalogoCursos.resx">
       <DependentUpon>FormCatalogoCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCursosRegistrados.resx">
+      <DependentUpon>FormCursosRegistrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCurso.resx">
+      <DependentUpon>FormEditarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarPerfil.resx">
       <DependentUpon>FormEditarPerfil.cs</DependentUpon>

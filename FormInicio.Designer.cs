@@ -41,6 +41,7 @@
             this.lblPerfilApellido = new System.Windows.Forms.Label();
             this.lblPerfilCorreo = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnVerCursosRegistrados);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -118,7 +120,7 @@
             // 
             this.lblInfoCorreo.AutoSize = true;
             this.lblInfoCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoCorreo.Location = new System.Drawing.Point(226, 179);
+            this.lblInfoCorreo.Location = new System.Drawing.Point(222, 179);
             this.lblInfoCorreo.Name = "lblInfoCorreo";
             this.lblInfoCorreo.Size = new System.Drawing.Size(64, 20);
             this.lblInfoCorreo.TabIndex = 6;
@@ -155,13 +157,23 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(336, 210);
+            this.btnEditar.Location = new System.Drawing.Point(235, 216);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(106, 23);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar Información";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnVerCursosRegistrados
+            // 
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(26, 391);
+            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
+            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
+            this.btnVerCursosRegistrados.TabIndex = 11;
+            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
+            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
+            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click_1);
             // 
             // FormInicio
             // 
@@ -204,5 +216,6 @@
         private System.Windows.Forms.Label lblPerfilCorreo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerCursosRegistrados;
     }
 }
