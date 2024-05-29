@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,26 +31,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ForosYComunicaciones.cs",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
-              "RelativeDocumentMoniker": "ForosYComunicaciones.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
-              "RelativeToolTip": "ForosYComunicaciones.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAfAAAA",
+              "Title": "EvaluacionYPruebas.cs",
+              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\EvaluacionYPruebas.cs",
+              "RelativeDocumentMoniker": "EvaluacionYPruebas.cs",
+              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\EvaluacionYPruebas.cs",
+              "RelativeToolTip": "EvaluacionYPruebas.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T21:14:20.864Z",
+              "WhenOpened": "2024-05-29T21:52:33.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ForosYComunicaciones.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
-              "RelativeDocumentMoniker": "ForosYComunicaciones.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ForosYComunicaciones.cs [Dise\u00F1o]",
+              "Title": "EvaluacionYPruebas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\EvaluacionYPruebas.cs",
+              "RelativeDocumentMoniker": "EvaluacionYPruebas.cs",
+              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\EvaluacionYPruebas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EvaluacionYPruebas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T21:13:59.162Z",
+              "WhenOpened": "2024-05-29T21:49:56.96Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

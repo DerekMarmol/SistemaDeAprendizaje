@@ -139,6 +139,12 @@
     <Compile Include="CentrodeNotificaciones.Designer.cs">
       <DependentUpon>CentrodeNotificaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvaluacionYPruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionYPruebas.Designer.cs">
+      <DependentUpon>EvaluacionYPruebas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CentrodeNotificaciones.resx">
       <DependentUpon>CentrodeNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionYPruebas.resx">
+      <DependentUpon>EvaluacionYPruebas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
