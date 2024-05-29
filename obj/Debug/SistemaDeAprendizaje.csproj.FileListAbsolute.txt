@@ -54,3 +54,17 @@ C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormAgregarCurso.resources
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormEditarCurso.resources
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormCursosRegistrados.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.csproj.AssemblyReference.cache
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\_10Notificaciones.CentroDeNotificaciones.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormRegistro.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormAgregarCurso.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormCatalogoCursos.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormCursosRegistrados.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormEditarCurso.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormEditarPerfil.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.FormInicio.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.Properties.Resources.resources
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.csproj.GenerateResource.cache
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.csproj.CoreCompileInputs.cache
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.exe
+C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.pdb
