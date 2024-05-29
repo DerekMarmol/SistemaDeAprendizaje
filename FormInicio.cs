@@ -12,15 +12,16 @@ namespace SistemaDeAprendizaje
         private bool esAdmin;
         private int usuarioID;
 
-        public FormInicio(bool isAdmin, int usuarioID)
+        public FormInicio(bool esAdmin, int usuarioID, string nombre, string apellido, string correo)
         {
             InitializeComponent();
-            this.esAdmin = isAdmin;
+            this.esAdmin = esAdmin;
             this.usuarioID = usuarioID;
-        }
 
-        public FormInicio()
-        {
+            // Establecer los valores de nombre, apellido y correo
+            SetPerfilNombre(nombre);
+            SetPerfilApellido(apellido);
+            SetPerfilCorreo(correo);
         }
 
         public void SetPerfilNombre(string nombre)

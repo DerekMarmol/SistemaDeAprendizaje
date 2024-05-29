@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCambiarImagen = new System.Windows.Forms.Button();
             this.lblInformacion = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.lblPerfilApellido = new System.Windows.Forms.Label();
             this.lblPerfilCorreo = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,9 +49,9 @@
             // pictureBoxImage
             // 
             this.pictureBoxImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImage.BackgroundImage")));
-            this.pictureBoxImage.Location = new System.Drawing.Point(629, 12);
+            this.pictureBoxImage.Location = new System.Drawing.Point(634, 12);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(150, 139);
+            this.pictureBoxImage.Size = new System.Drawing.Size(145, 139);
             this.pictureBoxImage.TabIndex = 0;
             this.pictureBoxImage.TabStop = false;
             this.pictureBoxImage.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -64,6 +64,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 426);
             this.panel1.TabIndex = 1;
+            // 
+            // btnVerCursosRegistrados
+            // 
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(26, 391);
+            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
+            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
+            this.btnVerCursosRegistrados.TabIndex = 11;
+            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
+            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
+            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click_1);
             // 
             // button1
             // 
@@ -164,16 +174,6 @@
             this.btnEditar.Text = "Editar Información";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnVerCursosRegistrados
-            // 
-            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(26, 391);
-            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
-            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
-            this.btnVerCursosRegistrados.TabIndex = 11;
-            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
-            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
-            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click_1);
             // 
             // FormInicio
             // 

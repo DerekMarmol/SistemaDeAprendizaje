@@ -83,6 +83,22 @@ namespace SistemaDeAprendizaje
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
+                    string checkInscripcionQuery = "SELECT COUNT(*) FROM Inscripciones WHERE UsuarioID = @UsuarioID AND CursoID = @CursoID";
+                    using (MySqlCommand checkInscripcionCommand = new MySqlCommand(checkInscripcionQuery, connection))
+                    {
+                        checkInscripcionCommand.Parameters.AddWithValue("@UsuarioID", usuarioID);
+                        checkInscripcionCommand.Parameters.AddWithValue("@CursoID", cursoID);
+
+                        connection.Open();
+                        int inscripcionExistente = Convert.ToInt32(checkInscripcionCommand.ExecuteScalar());
+
+                        if (inscripcionExistente > 0)
+                        {
+                            MessageBox.Show("Ya estás inscrito en este curso.");
+                            return;
+                        }
+                    }
+
                     string query = "INSERT INTO Inscripciones (UsuarioID, CursoID) VALUES (@UsuarioID, @CursoID)";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -91,7 +107,6 @@ namespace SistemaDeAprendizaje
 
                         try
                         {
-                            connection.Open();
                             command.ExecuteNonQuery();
                             MessageBox.Show("Inscripción exitosa al curso.");
                         }
@@ -108,9 +123,48 @@ namespace SistemaDeAprendizaje
         {
             try
             {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT Nombre, Apellido, Email FROM Usuarios WHERE UsuarioID = @UsuarioID";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioID", usuarioID);
+
+                        connection.Open();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string nombre = reader.GetString("Nombre");
+                                string apellido = reader.GetString("Apellido");
+                                string correo = reader.GetString("Email");
+
+                                this.Hide();
+                                FormInicio formInicio = new FormInicio(esAdmin, usuarioID, nombre, apellido, correo);
+                                formInicio.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos del usuario.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void btnVerCursosRegistrados_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 this.Hide();
-                FormInicio formInicio = new FormInicio(esAdmin, usuarioID);
-                formInicio.Show();
+                FormCursosRegistrados formCursosRegistrados = new FormCursosRegistrados(usuarioID);
+                formCursosRegistrados.Show();
             }
             catch (Exception ex)
             {

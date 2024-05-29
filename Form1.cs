@@ -124,10 +124,10 @@ namespace SistemaDeAprendizaje
             string contraseñaIngresada = txtContraseña.Text;
 
             string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT UsuarioID, Nombre, Apellido, Email, Contraseña, isAdmin FROM Usuarios WHERE Email = @Email";
-
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
@@ -143,17 +143,16 @@ namespace SistemaDeAprendizaje
                                 string contraseñaHash = reader.GetString("Contraseña");
                                 bool isAdmin = reader.GetBoolean("isAdmin");
                                 int usuarioID = reader.GetInt32("UsuarioID");
+                                string nombre = reader.GetString("Nombre");
+                                string apellido = reader.GetString("Apellido");
+                                string correo = reader.GetString("Email");
 
                                 if (BCrypt.Net.BCrypt.Verify(contraseñaIngresada, contraseñaHash))
                                 {
                                     MessageBox.Show("Inicio de sesión exitoso");
                                     this.Hide();
 
-                                    FormInicio formInicio = new FormInicio(isAdmin, usuarioID);
-                                    formInicio.SetPerfilNombre(reader.GetString("Nombre")); 
-                                    formInicio.SetPerfilApellido(reader.GetString("Apellido")); 
-                                    formInicio.SetPerfilCorreo(reader.GetString("Email"));
-
+                                    FormInicio formInicio = new FormInicio(isAdmin, usuarioID, nombre, apellido, correo);
                                     formInicio.Show();
                                 }
                                 else

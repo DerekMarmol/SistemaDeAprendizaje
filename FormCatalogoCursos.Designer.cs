@@ -30,12 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarCurso = new System.Windows.Forms.Button();
             this.btnEditarCurso = new System.Windows.Forms.Button();
             this.btnEliminarCurso = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnRegistrarCurso = new System.Windows.Forms.Button();
+            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,11 +53,22 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnVerCursosRegistrados);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(4, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(144, 426);
             this.panel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Perfil De Usuario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAgregarCurso
             // 
@@ -96,16 +108,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(442, 327);
             this.dataGridView1.TabIndex = 6;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(18, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Perfil De Usuario";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnRegistrarCurso
             // 
             this.btnRegistrarCurso.Location = new System.Drawing.Point(685, 217);
@@ -115,6 +117,16 @@
             this.btnRegistrarCurso.Text = "Registrarse";
             this.btnRegistrarCurso.UseVisualStyleBackColor = true;
             this.btnRegistrarCurso.Click += new System.EventHandler(this.btnRegistrarCurso_Click);
+            // 
+            // btnVerCursosRegistrados
+            // 
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 400);
+            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
+            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
+            this.btnVerCursosRegistrados.TabIndex = 12;
+            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
+            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
+            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click);
             // 
             // FormCatalogoCursos
             // 
@@ -149,5 +161,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegistrarCurso;
+        private System.Windows.Forms.Button btnVerCursosRegistrados;
     }
 }
