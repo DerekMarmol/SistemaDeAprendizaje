@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\formeditarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formeditarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\formeditarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formeditarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\formcursosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcursosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\centrodenotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:centrodenotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\centrodenotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:centrodenotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\dani3\\onedrive\\escritorio\\proyectoclon\\forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forosycomunicaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 276,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,111 +30,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormInicio.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormInicio.cs",
-              "RelativeDocumentMoniker": "FormInicio.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormInicio.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormInicio.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:58.887Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormEditarPerfil.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormEditarPerfil.cs",
-              "RelativeDocumentMoniker": "FormEditarPerfil.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormEditarPerfil.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormEditarPerfil.cs [Dise\u00F1o]",
+              "Title": "ForosYComunicaciones.cs",
+              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
+              "RelativeDocumentMoniker": "ForosYComunicaciones.cs",
+              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
+              "RelativeToolTip": "ForosYComunicaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:46.378Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormEditarCurso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormEditarCurso.cs",
-              "RelativeDocumentMoniker": "FormEditarCurso.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormEditarCurso.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormEditarCurso.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:36.216Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormCursosRegistrados.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormCursosRegistrados.cs",
-              "RelativeDocumentMoniker": "FormCursosRegistrados.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormCursosRegistrados.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormCursosRegistrados.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:26.061Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormCatalogoCursos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormCatalogoCursos.cs",
-              "RelativeDocumentMoniker": "FormCatalogoCursos.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormCatalogoCursos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormCatalogoCursos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:14.195Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormAgregarCurso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormAgregarCurso.cs",
-              "RelativeDocumentMoniker": "FormAgregarCurso.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\FormAgregarCurso.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAgregarCurso.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:28:58.213Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:28:37.651Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CentrodeNotificaciones.cs",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\CentrodeNotificaciones.cs",
-              "RelativeDocumentMoniker": "CentrodeNotificaciones.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\CentrodeNotificaciones.cs",
-              "RelativeToolTip": "CentrodeNotificaciones.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:14:20.274Z",
+              "WhenOpened": "2024-05-29T21:14:20.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CentrodeNotificaciones.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\CentrodeNotificaciones.cs",
-              "RelativeDocumentMoniker": "CentrodeNotificaciones.cs",
-              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\CentrodeNotificaciones.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CentrodeNotificaciones.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "ForosYComunicaciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs",
+              "RelativeDocumentMoniker": "ForosYComunicaciones.cs",
+              "ToolTip": "C:\\Users\\dani3\\OneDrive\\Escritorio\\Proyectoclon\\ForosYComunicaciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ForosYComunicaciones.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:14:08.776Z",
+              "WhenOpened": "2024-05-29T21:13:59.162Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

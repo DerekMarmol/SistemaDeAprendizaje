@@ -181,6 +181,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForosYComunicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForosYComunicaciones.Designer.cs">
+      <DependentUpon>ForosYComunicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CentrodeNotificaciones.resx">
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForosYComunicaciones.resx">
+      <DependentUpon>ForosYComunicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
