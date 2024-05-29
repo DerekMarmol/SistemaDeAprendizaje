@@ -192,6 +192,7 @@
             this.Controls.Add(this.btnCambiarImagen);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxImage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormInicio";
             this.Text = "FormInicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);

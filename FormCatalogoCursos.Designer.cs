@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCatalogoCursos));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarCurso = new System.Windows.Forms.Button();
             this.btnEditarCurso = new System.Windows.Forms.Button();
             this.btnEliminarCurso = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRegistrarCurso = new System.Windows.Forms.Button();
-            this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(144, 426);
             this.panel1.TabIndex = 2;
+            // 
+            // btnVerCursosRegistrados
+            // 
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 400);
+            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
+            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
+            this.btnVerCursosRegistrados.TabIndex = 12;
+            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
+            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
+            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click);
             // 
             // button1
             // 
@@ -118,16 +129,6 @@
             this.btnRegistrarCurso.UseVisualStyleBackColor = true;
             this.btnRegistrarCurso.Click += new System.EventHandler(this.btnRegistrarCurso_Click);
             // 
-            // btnVerCursosRegistrados
-            // 
-            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 400);
-            this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
-            this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
-            this.btnVerCursosRegistrados.TabIndex = 12;
-            this.btnVerCursosRegistrados.Text = "Ver Cursos Registrados";
-            this.btnVerCursosRegistrados.UseVisualStyleBackColor = true;
-            this.btnVerCursosRegistrados.Click += new System.EventHandler(this.btnVerCursosRegistrados_Click);
-            // 
             // FormCatalogoCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.btnAgregarCurso);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCatalogoCursos";
             this.Text = "FormCatalogoCursos";
             this.Load += new System.EventHandler(this.FormCatalogoCursos_Load);
