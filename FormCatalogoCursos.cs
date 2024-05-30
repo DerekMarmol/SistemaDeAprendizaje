@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -11,6 +12,8 @@ namespace SistemaDeAprendizaje
         private bool esAdmin;
         private int usuarioID;
 
+
+
         public FormCatalogoCursos(bool esAdmin, int usuarioID)
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace SistemaDeAprendizaje
             btnAgregarCurso.Visible = esAdmin;
             btnEditarCurso.Visible = esAdmin;
             btnEliminarCurso.Visible = esAdmin;
+            btnAdministrarMateriales.Visible = esAdmin;
         }
 
         private void FormCatalogoCursos_Load(object sender, EventArgs e)
@@ -40,13 +44,48 @@ namespace SistemaDeAprendizaje
             }
         }
 
+
         private void btnAgregarCurso_Click(object sender, EventArgs e)
         {
             FormAgregarCurso formAgregarCurso = new FormAgregarCurso();
-            formAgregarCurso.ShowDialog();
+            if (formAgregarCurso.ShowDialog() == DialogResult.OK)
+            {
+                CargarCursosEnDataGridView();
 
-            CargarCursosEnDataGridView();
+                // Obtener lista de correos de los usuarios
+                List<string> correos = ObtenerCorreosUsuarios();
+
+                // Enviar correos
+                foreach (var correo in correos)
+                {
+                    EmailHelper.EnviarCorreo(correo, "Nuevo Curso Agregado", "Se ha agregado un nuevo curso: " + formAgregarCurso.NombreCurso);
+                }
+            }
         }
+
+        private List<string> ObtenerCorreosUsuarios()
+        {
+            List<string> correos = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT Email FROM Usuarios";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            correos.Add(reader.GetString("Email"));
+                        }
+                    }
+                }
+            }
+
+            return correos;
+        }
+
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
@@ -177,8 +216,32 @@ namespace SistemaDeAprendizaje
             if (dataGridView1.CurrentRow != null)
             {
                 int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
-                FormAdministrarMateriales formAdministrarMateriales = new FormAdministrarMateriales(cursoID);
-                formAdministrarMateriales.ShowDialog();
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT Nombre, Apellido, Email FROM Usuarios WHERE UsuarioID = @UsuarioID";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioID", usuarioID);
+
+                        connection.Open();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string nombre = reader.GetString("Nombre");
+                                string apellido = reader.GetString("Apellido");
+                                string correo = reader.GetString("Email");
+
+                                FormAdministrarMateriales formAdministrarMateriales = new FormAdministrarMateriales(cursoID, esAdmin, usuarioID, nombre, apellido, correo);
+                                formAdministrarMateriales.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos del usuario.");
+                            }
+                        }
+                    }
+                }
             }
         }
     }

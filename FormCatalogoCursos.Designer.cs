@@ -39,6 +39,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRegistrarCurso = new System.Windows.Forms.Button();
             this.btnAdministrarMateriales = new System.Windows.Forms.Button();
+            this.btnVerMateriales = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             // btnVerCursosRegistrados
             // 
-            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 400);
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 389);
             this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
             this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
             this.btnVerCursosRegistrados.TabIndex = 12;
@@ -74,9 +75,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 15);
+            this.button1.Location = new System.Drawing.Point(3, 16);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.Size = new System.Drawing.Size(133, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "Perfil De Usuario";
             this.button1.UseVisualStyleBackColor = true;
@@ -140,12 +141,22 @@
             this.btnAdministrarMateriales.UseVisualStyleBackColor = true;
             this.btnAdministrarMateriales.Click += new System.EventHandler(this.btnAdministrarMateriales_Click);
             // 
+            // btnVerMateriales
+            // 
+            this.btnVerMateriales.Location = new System.Drawing.Point(670, 307);
+            this.btnVerMateriales.Name = "btnVerMateriales";
+            this.btnVerMateriales.Size = new System.Drawing.Size(118, 23);
+            this.btnVerMateriales.TabIndex = 9;
+            this.btnVerMateriales.Text = "Ver Materiales";
+            this.btnVerMateriales.UseVisualStyleBackColor = true;
+            // 
             // FormCatalogoCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVerMateriales);
             this.Controls.Add(this.btnAdministrarMateriales);
             this.Controls.Add(this.btnRegistrarCurso);
             this.Controls.Add(this.dataGridView1);
@@ -177,5 +188,6 @@
         private System.Windows.Forms.Button btnRegistrarCurso;
         private System.Windows.Forms.Button btnVerCursosRegistrados;
         private System.Windows.Forms.Button btnAdministrarMateriales;
+        private System.Windows.Forms.Button btnVerMateriales;
     }
 }

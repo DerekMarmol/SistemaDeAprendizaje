@@ -124,6 +124,7 @@
             this.txtEmailFrom.Name = "txtEmailFrom";
             this.txtEmailFrom.Size = new System.Drawing.Size(342, 20);
             this.txtEmailFrom.TabIndex = 7;
+            this.txtEmailFrom.TextChanged += new System.EventHandler(this.txtEmailFrom_TextChanged);
             // 
             // txtSubject
             // 
@@ -139,6 +140,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(342, 73);
             this.txtMessage.TabIndex = 9;
+            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
             // 
             // panel1
             // 

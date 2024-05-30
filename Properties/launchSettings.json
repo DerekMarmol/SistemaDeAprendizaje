@@ -1,0 +1,23 @@
+{
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "EMAIL_USER": "derekmarmol236@gmail.com",
+        "EMAIL_PASSWORD": "Marmolito@123"
+      }
+    },
+    "SistemaDeAprendizaje": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "EMAIL_USER": "derekmarmol236@gmail.com",
+        "EMAIL_PASSWORD": "Marmolito@123"
+      }
+    }
+  }
+}

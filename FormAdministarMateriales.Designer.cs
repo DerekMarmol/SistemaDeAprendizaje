@@ -36,7 +36,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblRutaArchivo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminarMaterial = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,9 +53,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(676, 112);
+            this.btnAgregar.Location = new System.Drawing.Point(673, 79);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(118, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(121, 23);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -59,9 +63,9 @@
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(676, 158);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(673, 133);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
-            this.btnSeleccionarArchivo.Size = new System.Drawing.Size(118, 23);
+            this.btnSeleccionarArchivo.Size = new System.Drawing.Size(121, 23);
             this.btnSeleccionarArchivo.TabIndex = 2;
             this.btnSeleccionarArchivo.Text = "Seleccionar Archivo";
             this.btnSeleccionarArchivo.UseVisualStyleBackColor = true;
@@ -70,23 +74,23 @@
             // cboTipoArchivo
             // 
             this.cboTipoArchivo.FormattingEnabled = true;
-            this.cboTipoArchivo.Location = new System.Drawing.Point(673, 202);
+            this.cboTipoArchivo.Location = new System.Drawing.Point(673, 175);
             this.cboTipoArchivo.Name = "cboTipoArchivo";
             this.cboTipoArchivo.Size = new System.Drawing.Size(121, 21);
             this.cboTipoArchivo.TabIndex = 3;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(676, 257);
+            this.txtDescripcion.Location = new System.Drawing.Point(673, 223);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(118, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 4;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(676, 303);
+            this.txtNombre.Location = new System.Drawing.Point(673, 271);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(118, 20);
+            this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // lblRutaArchivo
@@ -99,10 +103,41 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(13, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(126, 372);
+            this.panel1.Size = new System.Drawing.Size(153, 372);
             this.panel1.TabIndex = 7;
+            // 
+            // btnEliminarMaterial
+            // 
+            this.btnEliminarMaterial.Location = new System.Drawing.Point(673, 317);
+            this.btnEliminarMaterial.Name = "btnEliminarMaterial";
+            this.btnEliminarMaterial.Size = new System.Drawing.Size(121, 23);
+            this.btnEliminarMaterial.TabIndex = 8;
+            this.btnEliminarMaterial.Text = "Eliminar Material";
+            this.btnEliminarMaterial.UseVisualStyleBackColor = true;
+            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Perfil De Usuario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(13, 57);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Catalogo De Cursos";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FormAdministrarMateriales
             // 
@@ -110,6 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminarMaterial);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblRutaArchivo);
             this.Controls.Add(this.txtNombre);
@@ -122,6 +158,7 @@
             this.Text = "FormAdministarMateriales";
             this.Load += new System.EventHandler(this.FormAdministarMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +174,8 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblRutaArchivo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEliminarMaterial;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
