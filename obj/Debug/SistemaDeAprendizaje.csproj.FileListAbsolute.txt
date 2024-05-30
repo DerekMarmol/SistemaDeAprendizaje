@@ -68,3 +68,8 @@ C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.c
 C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.csproj.CoreCompileInputs.cache
 C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.exe
 C:\Users\dani3\OneDrive\Escritorio\Proyectoclon\obj\Debug\SistemaDeAprendizaje.pdb
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\_10Notificaciones.CentroDeNotificaciones.resources
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.EvaluacionYPruebas.resources
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormAdministrarMateriales.resources
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.FormVerMateriales.resources
+C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.ForosYComunicaciones.resources

@@ -171,5 +171,15 @@ namespace SistemaDeAprendizaje
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
+        private void btnAdministrarMateriales_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
+                FormAdministrarMateriales formAdministrarMateriales = new FormAdministrarMateriales(cursoID);
+                formAdministrarMateriales.ShowDialog();
+            }
+        }
     }
 }

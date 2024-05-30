@@ -151,6 +151,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdministarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdministarMateriales.Designer.cs">
+      <DependentUpon>FormAdministarMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerMateriales.Designer.cs">
+      <DependentUpon>FormVerMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForosYComunicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdministarMateriales.resx">
+      <DependentUpon>FormAdministarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarCurso.resx">
       <DependentUpon>FormAgregarCurso.cs</DependentUpon>
@@ -221,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerMateriales.resx">
+      <DependentUpon>FormVerMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForosYComunicaciones.resx">
       <DependentUpon>ForosYComunicaciones.cs</DependentUpon>

@@ -124,5 +124,14 @@ namespace SistemaDeAprendizaje
             }
         }
 
+        private void btnVerMateriales_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
+                FormVerMateriales formVerMateriales = new FormVerMateriales(cursoID);
+                formVerMateriales.ShowDialog();
+            }
+        }
     }
 }
