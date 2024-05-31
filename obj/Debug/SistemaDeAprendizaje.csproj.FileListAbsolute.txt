@@ -135,4 +135,7 @@ C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaD.
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.exe
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.pdb
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.CalifYRetro.resources
+<<<<<<< HEAD
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.CalifYRetro.resources
+=======
+>>>>>>> f566a00971221760e48613d3e28d2cdc533c0ae1

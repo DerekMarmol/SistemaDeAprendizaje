@@ -10,22 +10,9 @@ namespace SistemaDeAprendizaje
     {
         string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
 
-        private string nombre;
-        private string apellido;
-        private string correo;
-        private int cursoID;
-        private bool esAdmin;
-        private int usuarioID;
-
-        public CalifYRetro(string nombre, string apellido, string correo, int cursoID, bool esAdmin, int usuarioID)
+        public FormCalifYRetro()
         {
             InitializeComponent();
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.correo = correo;
-            this.cursoID = cursoID;
-            this.esAdmin = esAdmin;
-            this.usuarioID = usuarioID;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -71,16 +58,9 @@ namespace SistemaDeAprendizaje
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                         {
                             adapter.Fill(dtCalificaciones);
-                            dtgCalificaciones.DataSource = dtCalificaciones;
-
-                            foreach (DataGridViewColumn column in dtgCalificaciones.Columns)
-                            {
-                                column.ReadOnly = true;
-                            }
-
-                            dtgCalificaciones.Columns["Calificacion"].ReadOnly = false;
-                            dtgCalificaciones.Columns["Retroalimentacion"].ReadOnly = false;
+                            dvgCalificaciones.DataSource = dtCalificaciones;
                         }
+                        MessageBox.Show("se cargó la data del grid ");
                     }
                     catch (Exception ex)
                     {
@@ -133,9 +113,7 @@ namespace SistemaDeAprendizaje
                 }
             }
 
-            ComboBox1.DataSource = estudiantes;
-
-            // MessageBox.Show($"ComboBox contiene {ComboBox1.Items.Count} ítems.");
+            cmbEstudiante.DataSource = estudiantes;
         }
 
         private int ObtenerIdSeleccionado(string seleccionado)
@@ -214,23 +192,24 @@ namespace SistemaDeAprendizaje
                                 {
                                     MessageBox.Show($"Error al actualizar la calificación y retroalimentación para CalificacionID: {calificacionID}.");
                                 }
+                                else
+                                {
+                                    MessageBox.Show("Error al guardar la calificación y retroalimentación.");
+                                }
                             }
                         }
                     }
-                    MessageBox.Show("Las calificaciones y retroalimentaciones se han actualizado correctamente.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar las calificaciones y retroalimentaciones: " + ex.Message);
-                }
-                finally
-                {
-                    if (connection.State == ConnectionState.Open)
-                        connection.Close();
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar la calificación y retroalimentación: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                            connection.Close();
+                    }
                 }
             }
-
-            filasEditadas.Clear();
         }
     }
 }
