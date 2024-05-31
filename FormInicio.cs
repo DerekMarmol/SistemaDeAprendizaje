@@ -9,6 +9,7 @@ namespace SistemaDeAprendizaje
 {
     public partial class FormInicio : Form
     {
+        string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
         private bool esAdmin;
         private int usuarioID;
 
@@ -86,34 +87,16 @@ namespace SistemaDeAprendizaje
         }
 
 
-        private void ActualizarImagenPerfilEnBaseDeDatos(string correo, string rutaImagen)
+        private void ActualizarImagenPerfilEnBaseDeDatos(string correo, string nombreArchivo)
         {
-            string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
-
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
+                connection.Open();
                 string query = "UPDATE Usuarios SET FotoPerfil = @FotoPerfil WHERE Email = @Email";
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@FotoPerfil", rutaImagen);
-                    command.Parameters.AddWithValue("@Email", correo);
-
-                    try
-                    {
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al actualizar la base de datos: " + ex.Message);
-                    }
-                    finally
-                    {
-                        if (connection.State == ConnectionState.Open)
-                            connection.Close();
-                    }
-                }
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@FotoPerfil", nombreArchivo);
+                command.Parameters.AddWithValue("@Email", correo);
+                command.ExecuteNonQuery();
             }
         }
 
@@ -127,9 +110,32 @@ namespace SistemaDeAprendizaje
             return imagenRedimensionada;
         }
 
+        private void CargarImagenPerfil()
+        {
+            string correo = lblPerfilCorreo.Text;
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT FotoPerfil FROM Usuarios WHERE Email = @Email";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", correo);
+                string nombreArchivo = command.ExecuteScalar() as string;
+
+                if (!string.IsNullOrEmpty(nombreArchivo))
+                {
+                    string rutaGuardado = Path.Combine(Application.StartupPath, "ImagenesPerfil", nombreArchivo);
+                    if (File.Exists(rutaGuardado))
+                    {
+                        pictureBoxImage.Image = Image.FromFile(rutaGuardado);
+                    }
+                }
+            }
+        }
+
         private void FormInicio_Load(object sender, EventArgs e)
         {
-
+            CargarImagenPerfil();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
