@@ -32,12 +32,11 @@ namespace SistemaDeAprendizaje
 
         private void LlenarComboBoxTipoArchivo()
         {
-            // Ejemplo de tipos de archivo, puedes ajustar estos valores según tus necesidades
             cboTipoArchivo.Items.Add("Documento");
             cboTipoArchivo.Items.Add("Presentación");
             cboTipoArchivo.Items.Add("Video");
             cboTipoArchivo.Items.Add("Otro");
-            // Selecciona el primer ítem por defecto
+
             cboTipoArchivo.SelectedIndex = 0;
         }
 
@@ -77,6 +76,22 @@ namespace SistemaDeAprendizaje
             return correos;
         }
 
+        private string ObtenerNombreCurso(int cursoID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT NombreCurso FROM Cursos WHERE CursoID = @CursoID";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CursoID", cursoID);
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    return result != null ? result.ToString() : null;
+                }
+            }
+        }
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
@@ -86,13 +101,13 @@ namespace SistemaDeAprendizaje
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "INSERT INTO Materiales (CursoID, Tipo, Nombre, Ruta) VALUES (@CursoID, @Tipo, @Nombre, @Ruta)";
+                string query = "INSERT INTO Materiales (CursoID, TipoArchivo, Nombre, RutaArchivo) VALUES (@CursoID, @TipoArchivo, @Nombre, @RutaArchivo)";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@CursoID", cursoID);
-                    command.Parameters.AddWithValue("@Tipo", tipoArchivo);
+                    command.Parameters.AddWithValue("@TipoArchivo", tipoArchivo);
                     command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Ruta", rutaArchivo);
+                    command.Parameters.AddWithValue("@RutaArchivo", rutaArchivo);
 
                     try
                     {
@@ -100,13 +115,16 @@ namespace SistemaDeAprendizaje
                         command.ExecuteNonQuery();
                         MessageBox.Show("Material agregado con éxito.");
 
-                        // Obtener lista de correos de los usuarios
                         List<string> correos = ObtenerCorreosUsuarios();
 
-                        // Enviar correos
                         foreach (var correo in correos)
                         {
-                            EmailHelper.EnviarCorreo(correo, "Nuevo Material Agregado", "Se ha agregado un nuevo material para el curso: " + cursoID);
+                            string nombreCurso = ObtenerNombreCurso(cursoID);
+                            if (!string.IsNullOrEmpty(nombreCurso))
+                            {
+                                string mensaje = $"Se ha agregado un nuevo material para el curso '{nombreCurso}': {nombre}";
+                                EmailHelper.EnviarCorreo(correo, "Nuevo Material Agregado", mensaje);
+                            }
                         }
 
                         CargarMateriales();
@@ -178,6 +196,11 @@ namespace SistemaDeAprendizaje
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void cboTipoArchivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

@@ -52,15 +52,15 @@ namespace SistemaDeAprendizaje
             {
                 CargarCursosEnDataGridView();
 
-                // Obtener lista de correos de los usuarios
                 List<string> correos = ObtenerCorreosUsuarios();
 
-                // Enviar correos
                 foreach (var correo in correos)
                 {
                     EmailHelper.EnviarCorreo(correo, "Nuevo Curso Agregado", "Se ha agregado un nuevo curso: " + formAgregarCurso.NombreCurso);
                 }
+
             }
+
         }
 
         private List<string> ObtenerCorreosUsuarios()
@@ -89,18 +89,43 @@ namespace SistemaDeAprendizaje
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            if (dataGridView1.CurrentRow != null)
             {
-                connection.Open();
-                string deleteQuery = "DELETE FROM Cursos WHERE CursoID = @CursoID";
-                MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection);
-                deleteCommand.Parameters.AddWithValue("@CursoID", cursoID);
-                deleteCommand.ExecuteNonQuery();
-            }
+                int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
 
-            CargarCursosEnDataGridView();
+                if (MessageBox.Show("¿Estás seguro de que deseas eliminar este curso?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            string deleteInscripcionesQuery = "DELETE FROM Inscripciones WHERE CursoID = @CursoID";
+                            MySqlCommand deleteInscripcionesCommand = new MySqlCommand(deleteInscripcionesQuery, connection);
+                            deleteInscripcionesCommand.Parameters.AddWithValue("@CursoID", cursoID);
+                            deleteInscripcionesCommand.ExecuteNonQuery();
+
+                            string deleteCursoQuery = "DELETE FROM Cursos WHERE CursoID = @CursoID";
+                            MySqlCommand deleteCursoCommand = new MySqlCommand(deleteCursoQuery, connection);
+                            deleteCursoCommand.Parameters.AddWithValue("@CursoID", cursoID);
+                            deleteCursoCommand.ExecuteNonQuery();
+
+                            MessageBox.Show("Curso eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al eliminar el curso: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    CargarCursosEnDataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEditarCurso_Click_1(object sender, EventArgs e)

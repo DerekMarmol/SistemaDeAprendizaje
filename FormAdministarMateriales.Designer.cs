@@ -36,9 +36,9 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblRutaArchivo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEliminarMaterial = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminarMaterial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(673, 133);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(673, 131);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(121, 23);
             this.btnSeleccionarArchivo.TabIndex = 2;
@@ -78,6 +78,7 @@
             this.cboTipoArchivo.Name = "cboTipoArchivo";
             this.cboTipoArchivo.Size = new System.Drawing.Size(121, 21);
             this.cboTipoArchivo.TabIndex = 3;
+            this.cboTipoArchivo.SelectedIndexChanged += new System.EventHandler(this.cboTipoArchivo_SelectedIndexChanged);
             // 
             // txtDescripcion
             // 
@@ -96,7 +97,7 @@
             // lblRutaArchivo
             // 
             this.lblRutaArchivo.AutoSize = true;
-            this.lblRutaArchivo.Location = new System.Drawing.Point(670, 143);
+            this.lblRutaArchivo.Location = new System.Drawing.Point(681, 105);
             this.lblRutaArchivo.Name = "lblRutaArchivo";
             this.lblRutaArchivo.Size = new System.Drawing.Size(0, 13);
             this.lblRutaArchivo.TabIndex = 6;
@@ -110,15 +111,14 @@
             this.panel1.Size = new System.Drawing.Size(153, 372);
             this.panel1.TabIndex = 7;
             // 
-            // btnEliminarMaterial
+            // button2
             // 
-            this.btnEliminarMaterial.Location = new System.Drawing.Point(673, 317);
-            this.btnEliminarMaterial.Name = "btnEliminarMaterial";
-            this.btnEliminarMaterial.Size = new System.Drawing.Size(121, 23);
-            this.btnEliminarMaterial.TabIndex = 8;
-            this.btnEliminarMaterial.Text = "Eliminar Material";
-            this.btnEliminarMaterial.UseVisualStyleBackColor = true;
-            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
+            this.button2.Location = new System.Drawing.Point(13, 57);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Catalogo De Cursos";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -130,14 +130,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnEliminarMaterial
             // 
-            this.button2.Location = new System.Drawing.Point(13, 57);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Catalogo De Cursos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminarMaterial.Location = new System.Drawing.Point(673, 317);
+            this.btnEliminarMaterial.Name = "btnEliminarMaterial";
+            this.btnEliminarMaterial.Size = new System.Drawing.Size(121, 23);
+            this.btnEliminarMaterial.TabIndex = 8;
+            this.btnEliminarMaterial.Text = "Eliminar Material";
+            this.btnEliminarMaterial.UseVisualStyleBackColor = true;
+            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
             // FormAdministrarMateriales
             // 
