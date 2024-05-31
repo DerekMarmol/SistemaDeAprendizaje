@@ -12,7 +12,9 @@ namespace SistemaDeAprendizaje
         private bool esAdmin;
         private int usuarioID;
 
-
+        public string nombre { get; private set; }
+        public string apellido { get; private set; }
+        public string correo { get; private set; }
 
         public FormCatalogoCursos(bool esAdmin, int usuarioID)
         {
@@ -253,6 +255,7 @@ namespace SistemaDeAprendizaje
                         {
                             if (reader.Read())
                             {
+                                this.Hide();
                                 string nombre = reader.GetString("Nombre");
                                 string apellido = reader.GetString("Apellido");
                                 string correo = reader.GetString("Email");
@@ -269,5 +272,27 @@ namespace SistemaDeAprendizaje
                 }
             }
         }
+
+        private void btnVerMateriales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEvaluacionesYPruebas_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int cursoID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["CursoID"].Value);
+
+                EvaluacionYPruebas formEvaluacionYPruebas = new EvaluacionYPruebas(nombre, apellido, correo, cursoID, esAdmin, usuarioID);
+                formEvaluacionYPruebas.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un curso.");
+            }
+        }
+
     }
 }
+

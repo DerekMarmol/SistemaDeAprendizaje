@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -92,13 +93,24 @@ namespace SistemaDeAprendizaje
         }
 
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private async void btnAgregar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
             string descripcion = txtDescripcion.Text;
             string tipoArchivo = cboTipoArchivo.SelectedItem.ToString();
             string rutaArchivo = lblRutaArchivo.Text;
 
+            lblStatus.Visible = true;
+            lblStatus.Text = "Agregando material, por favor espere...";
+
+            await Task.Run(() => AgregarMaterial(nombre, descripcion, tipoArchivo, rutaArchivo));
+
+            lblStatus.Visible = false;
+            CargarMateriales();
+        }
+
+        private void AgregarMaterial(string nombre, string descripcion, string tipoArchivo, string rutaArchivo)
+        {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "INSERT INTO Materiales (CursoID, TipoArchivo, Nombre, RutaArchivo) VALUES (@CursoID, @TipoArchivo, @Nombre, @RutaArchivo)";
@@ -119,15 +131,8 @@ namespace SistemaDeAprendizaje
 
                         foreach (var correo in correos)
                         {
-                            string nombreCurso = ObtenerNombreCurso(cursoID);
-                            if (!string.IsNullOrEmpty(nombreCurso))
-                            {
-                                string mensaje = $"Se ha agregado un nuevo material para el curso '{nombreCurso}': {nombre}";
-                                EmailHelper.EnviarCorreo(correo, "Nuevo Material Agregado", mensaje);
-                            }
+                            EmailHelper.EnviarCorreo(correo, "Nuevo Material Agregado", "Se ha agregado un nuevo material para el curso: " + cursoID);
                         }
-
-                        CargarMateriales();
                     }
                     catch (Exception ex)
                     {
@@ -136,6 +141,7 @@ namespace SistemaDeAprendizaje
                 }
             }
         }
+
 
         private void btnSeleccionarArchivo_Click(object sender, EventArgs e)
         {
@@ -195,12 +201,60 @@ namespace SistemaDeAprendizaje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT Nombre, Apellido, Email FROM Usuarios WHERE UsuarioID = @UsuarioID";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioID", usuarioID);
+
+                        connection.Open();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string nombre = reader.GetString("Nombre");
+                                string apellido = reader.GetString("Apellido");
+                                string correo = reader.GetString("Email");
+
+                                this.Hide();
+                                FormInicio formInicio = new FormInicio(esAdmin, usuarioID, nombre, apellido, correo);
+                                formInicio.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos del usuario.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
         private void cboTipoArchivo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+                FormCatalogoCursos formCatalogo = new FormCatalogoCursos(esAdmin, usuarioID);
+                formCatalogo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
     }
     

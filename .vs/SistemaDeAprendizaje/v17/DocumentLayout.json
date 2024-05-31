@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formcalifyretro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcalifyretro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formadministarmateriales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formadministarmateriales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formcalifyretro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcalifyretro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:forminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formadministarmateriales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formadministarmateriales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\evaluacionypruebas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:evaluacionypruebas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:evaluacionypruebas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formcatalogocursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,8 +37,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 317,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 311,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,58 +49,89 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormCalifYRetro.cs",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCalifYRetro.cs",
+              "RelativeDocumentMoniker": "FormCalifYRetro.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCalifYRetro.cs",
+              "RelativeToolTip": "FormCalifYRetro.cs",
+              "ViewState": "AQIAANIAAAAAAAAAAAAwwOoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:55:32.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCalifYRetro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCalifYRetro.cs",
+              "RelativeDocumentMoniker": "FormCalifYRetro.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCalifYRetro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormCalifYRetro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:55:29.664Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EvaluacionYPruebas.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\EvaluacionYPruebas.Designer.cs",
+              "RelativeDocumentMoniker": "EvaluacionYPruebas.Designer.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\EvaluacionYPruebas.Designer.cs",
+              "RelativeToolTip": "EvaluacionYPruebas.Designer.cs",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAewK0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:31:29.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EvaluacionYPruebas.cs",
+              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\EvaluacionYPruebas.cs",
+              "RelativeDocumentMoniker": "EvaluacionYPruebas.cs",
+              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\EvaluacionYPruebas.cs",
+              "RelativeToolTip": "EvaluacionYPruebas.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAmwHwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T20:25:36.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FormInicio.cs",
               "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormInicio.cs",
               "RelativeDocumentMoniker": "FormInicio.cs",
               "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormInicio.cs",
               "RelativeToolTip": "FormInicio.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAQwIUAAAAJAAAA",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAEwNMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T00:13:15.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormInicio.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormInicio.cs",
-              "RelativeDocumentMoniker": "FormInicio.cs",
-              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormInicio.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormInicio.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:13:13.107Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormAdministarMateriales.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAdministarMateriales.cs",
-              "RelativeDocumentMoniker": "FormAdministarMateriales.cs",
-              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAdministarMateriales.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormAdministarMateriales.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T23:29:26.267Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "FormCatalogoCursos.cs",
               "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeDocumentMoniker": "FormCatalogoCursos.cs",
               "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeToolTip": "FormCatalogoCursos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAADPAAAA",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAcwBYBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T05:28:53.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FormCatalogoCursos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormCatalogoCursos.cs",
               "RelativeDocumentMoniker": "FormCatalogoCursos.cs",
@@ -105,29 +140,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T05:28:41.705Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormAdministarMateriales.cs",
-              "DocumentMoniker": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAdministarMateriales.cs",
-              "RelativeDocumentMoniker": "FormAdministarMateriales.cs",
-              "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\FormAdministarMateriales.cs",
-              "RelativeToolTip": "FormAdministarMateriales.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAgwIAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T05:12:43.577Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 83,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
