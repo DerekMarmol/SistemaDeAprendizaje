@@ -212,12 +212,7 @@ namespace SistemaDeAprendizaje
 
         private void btnCalificaciones_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            CalifYRetro formCalificaciones = new CalifYRetro(nombre, apellido, correo, cursoID, esAdmin, usuarioID);
-=======
-            CalifYRetro formCalificaciones = new CalifYRetro();
->>>>>>> f566a00971221760e48613d3e28d2cdc533c0ae1
-            formCalificaciones.Show();
+
         }
     }
 }

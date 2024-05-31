@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemaDeAprendizaje
 {
@@ -10,31 +11,39 @@ namespace SistemaDeAprendizaje
     {
         string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
 
-        public FormCalifYRetro()
+        private string nombre;
+        private string apellido;
+        private string correo;
+        private int cursoID;
+        private bool esAdmin;
+        private int usuarioID;
+
+        public CalifYRetro(string nombre, string apellido, string correo, int cursoID, bool esAdmin, int usuarioID)
         {
             InitializeComponent();
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.correo = correo;
+            this.cursoID = cursoID;
+            this.esAdmin = esAdmin;
+            this.usuarioID = usuarioID;
+
+            ConfigurarDataGridView();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void FormCalifYRetro_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("Form2_Load llamado.");
             CargarEstudiantes();
 
             if (ComboBox1.SelectedItem != null)
             {
                 int idEstudiante = ObtenerIdSeleccionado(ComboBox1.SelectedItem.ToString());
-                //MessageBox.Show("seleccionado " + idEstudiante);
                 CargarCalificacionesEstudiante(idEstudiante);
-            }
-            else
-            {
-                MessageBox.Show("no hay seleccionado ");
             }
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // MessageBox.Show("comboBox1_SelectedIndexChanged llamado.");
             if (ComboBox1.SelectedItem != null)
             {
                 int idEstudiante = ObtenerIdSeleccionado(ComboBox1.SelectedItem.ToString());
@@ -44,7 +53,6 @@ namespace SistemaDeAprendizaje
 
         private void CargarCalificacionesEstudiante(int idEstudiante)
         {
-            //MessageBox.Show($"CargarCalificacionesEstudiante llamado con idEstudiante: {idEstudiante}");
             DataTable dtCalificaciones = new DataTable();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -58,9 +66,13 @@ namespace SistemaDeAprendizaje
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                         {
                             adapter.Fill(dtCalificaciones);
-                            dvgCalificaciones.DataSource = dtCalificaciones;
+                            dtgCalificaciones.DataSource = dtCalificaciones;
+
+                            foreach (DataGridViewColumn column in dtgCalificaciones.Columns)
+                            {
+                                column.ReadOnly = !esAdmin; // Solo los administradores pueden editar
+                            }
                         }
-                        MessageBox.Show("se cargó la data del grid ");
                     }
                     catch (Exception ex)
                     {
@@ -73,20 +85,15 @@ namespace SistemaDeAprendizaje
                     }
                 }
             }
-            dtgCalificaciones.DataSource = dtCalificaciones;
-            dtgCalificaciones.Columns["CalificacionID"].ReadOnly = true;
-            dtgCalificaciones.Columns["CursoID"].ReadOnly = true;
         }
-
 
         private void CargarEstudiantes()
         {
-            //MessageBox.Show("CargarEstudiantes llamado.");
             List<string> estudiantes = new List<string>();
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "SELECT UsuarioID, Nombre FROM Usuarios as Estudiantes";
+                string query = "SELECT UsuarioID, CONCAT(Nombre, ' ', Apellido) AS NombreCompleto FROM Usuarios";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     try
@@ -96,10 +103,9 @@ namespace SistemaDeAprendizaje
                         {
                             while (reader.Read())
                             {
-                                estudiantes.Add($"{reader.GetInt32("UsuarioID")} - {reader.GetString("Nombre")}");
+                                estudiantes.Add($"{reader.GetInt32("UsuarioID")} - {reader.GetString("NombreCompleto")}");
                             }
                         }
-                        MessageBox.Show($"Se encontraron {estudiantes.Count} estudiantes.");
                     }
                     catch (Exception ex)
                     {
@@ -113,12 +119,11 @@ namespace SistemaDeAprendizaje
                 }
             }
 
-            cmbEstudiante.DataSource = estudiantes;
+            ComboBox1.DataSource = estudiantes;
         }
 
         private int ObtenerIdSeleccionado(string seleccionado)
         {
-            //MessageBox.Show($"ObtenerIdSeleccionado llamado con seleccionado: {seleccionado}");
             int idSelected = int.Parse(seleccionado.Split('-')[0].Trim());
             return idSelected;
         }
@@ -135,25 +140,27 @@ namespace SistemaDeAprendizaje
 
         private void dtgCalificaciones_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show($"CellValueChanged llamado en fila {e.RowIndex}, columna {e.ColumnIndex}");
             if (e.RowIndex >= 0 && !dtgCalificaciones.Rows[e.RowIndex].IsNewRow)
             {
                 int calificacionID = Convert.ToInt32(dtgCalificaciones.Rows[e.RowIndex].Cells["CalificacionID"].Value);
                 if (!filasEditadas.Contains(calificacionID))
                 {
                     filasEditadas.Add(calificacionID);
-                    MessageBox.Show($"Fila con CalificacionID {calificacionID} añadida a filas editadas.");
                 }
             }
         }
-             
 
         private void buttonG_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Guardando...");
+            if (!esAdmin)
+            {
+                MessageBox.Show("No tienes permisos para guardar las calificaciones.");
+                return;
+            }
+
             if (ComboBox1.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, complete todos los campos.");
+                MessageBox.Show("Por favor, seleccione un estudiante.");
                 return;
             }
 
@@ -178,7 +185,6 @@ namespace SistemaDeAprendizaje
                         {
                             string calificacion = row.Cells["Calificacion"].Value.ToString();
                             string retroalimentacion = row.Cells["Retroalimentacion"].Value.ToString();
-                            //MessageBox.Show($"Actualizando CalificacionID {calificacionID} con Calificacion {calificacion} y Retroalimentacion {retroalimentacion}.");
 
                             string updateQuery = "UPDATE Calificaciones SET Calificacion = @Calificacion, Retroalimentacion = @Retroalimentacion WHERE CalificacionID = @CalificacionID";
                             using (MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection))
@@ -192,24 +198,23 @@ namespace SistemaDeAprendizaje
                                 {
                                     MessageBox.Show($"Error al actualizar la calificación y retroalimentación para CalificacionID: {calificacionID}.");
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Error al guardar la calificación y retroalimentación.");
-                                }
                             }
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al guardar la calificación y retroalimentación: " + ex.Message);
-                    }
-                    finally
-                    {
-                        if (connection.State == ConnectionState.Open)
-                            connection.Close();
-                    }
+                    MessageBox.Show("Las calificaciones y retroalimentaciones se han actualizado correctamente.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar las calificaciones y retroalimentaciones: " + ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
                 }
             }
+
+            filasEditadas.Clear();
         }
     }
 }
