@@ -98,6 +98,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(243, 20);
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.Text = "aulloa@gmail.com";
             // 
             // lblEmail
             // 
@@ -120,6 +121,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(243, 20);
             this.txtContraseña.TabIndex = 6;
+            this.txtContraseña.Text = "123456";
             // 
             // lblContraseña
             // 

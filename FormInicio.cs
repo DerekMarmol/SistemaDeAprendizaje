@@ -204,5 +204,11 @@ namespace SistemaDeAprendizaje
         {
             throw new NotImplementedException();
         }
+
+        private void btnCalificaciones_Click(object sender, EventArgs e)
+        {
+            CalifYRetro formCalificaciones = new CalifYRetro();
+            formCalificaciones.Show();
+        }
     }
 }
