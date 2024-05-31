@@ -18,7 +18,6 @@ namespace SistemaDeAprendizaje
             this.esAdmin = esAdmin;
             this.usuarioID = usuarioID;
 
-            // Establecer los valores de nombre, apellido y correo
             SetPerfilNombre(nombre);
             SetPerfilApellido(apellido);
             SetPerfilCorreo(correo);
@@ -70,10 +69,11 @@ namespace SistemaDeAprendizaje
                             Directory.CreateDirectory(rutaGuardado);
                         }
 
-                        string rutaImagen = Path.Combine(rutaGuardado, $"{Guid.NewGuid()}.png");
+                        string nombreArchivo = $"{Guid.NewGuid()}.png";
+                        string rutaImagen = Path.Combine(rutaGuardado, nombreArchivo);
                         imagenRedimensionada.Save(rutaImagen, System.Drawing.Imaging.ImageFormat.Png);
 
-                        ActualizarImagenPerfilEnBaseDeDatos(lblPerfilCorreo.Text, rutaImagen);
+                        ActualizarImagenPerfilEnBaseDeDatos(lblPerfilCorreo.Text, nombreArchivo);
 
                         MessageBox.Show("Imagen guardada y actualizada con éxito.");
                     }
@@ -84,6 +84,7 @@ namespace SistemaDeAprendizaje
                 }
             }
         }
+
 
         private void ActualizarImagenPerfilEnBaseDeDatos(string correo, string rutaImagen)
         {
