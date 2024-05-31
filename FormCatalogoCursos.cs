@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -11,6 +12,8 @@ namespace SistemaDeAprendizaje
         private bool esAdmin;
         private int usuarioID;
 
+
+
         public FormCatalogoCursos(bool esAdmin, int usuarioID)
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace SistemaDeAprendizaje
             btnAgregarCurso.Visible = esAdmin;
             btnEditarCurso.Visible = esAdmin;
             btnEliminarCurso.Visible = esAdmin;
+            btnAdministrarMateriales.Visible = esAdmin;
         }
 
         private void FormCatalogoCursos_Load(object sender, EventArgs e)
@@ -40,28 +44,88 @@ namespace SistemaDeAprendizaje
             }
         }
 
+
         private void btnAgregarCurso_Click(object sender, EventArgs e)
         {
             FormAgregarCurso formAgregarCurso = new FormAgregarCurso();
-            formAgregarCurso.ShowDialog();
+            if (formAgregarCurso.ShowDialog() == DialogResult.OK)
+            {
+                CargarCursosEnDataGridView();
 
-            CargarCursosEnDataGridView();
+                List<string> correos = ObtenerCorreosUsuarios();
+
+                foreach (var correo in correos)
+                {
+                    EmailHelper.EnviarCorreo(correo, "Nuevo Curso Agregado", "Se ha agregado un nuevo curso: " + formAgregarCurso.NombreCurso);
+                }
+
+            }
+
         }
 
-        private void btnEliminarCurso_Click(object sender, EventArgs e)
+        private List<string> ObtenerCorreosUsuarios()
         {
-            int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
+            List<string> correos = new List<string>();
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                connection.Open();
-                string deleteQuery = "DELETE FROM Cursos WHERE CursoID = @CursoID";
-                MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection);
-                deleteCommand.Parameters.AddWithValue("@CursoID", cursoID);
-                deleteCommand.ExecuteNonQuery();
+                string query = "SELECT Email FROM Usuarios";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            correos.Add(reader.GetString("Email"));
+                        }
+                    }
+                }
             }
 
-            CargarCursosEnDataGridView();
+            return correos;
+        }
+
+
+        private void btnEliminarCurso_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
+
+                if (MessageBox.Show("¿Estás seguro de que deseas eliminar este curso?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            string deleteInscripcionesQuery = "DELETE FROM Inscripciones WHERE CursoID = @CursoID";
+                            MySqlCommand deleteInscripcionesCommand = new MySqlCommand(deleteInscripcionesQuery, connection);
+                            deleteInscripcionesCommand.Parameters.AddWithValue("@CursoID", cursoID);
+                            deleteInscripcionesCommand.ExecuteNonQuery();
+
+                            string deleteCursoQuery = "DELETE FROM Cursos WHERE CursoID = @CursoID";
+                            MySqlCommand deleteCursoCommand = new MySqlCommand(deleteCursoQuery, connection);
+                            deleteCursoCommand.Parameters.AddWithValue("@CursoID", cursoID);
+                            deleteCursoCommand.ExecuteNonQuery();
+
+                            MessageBox.Show("Curso eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al eliminar el curso: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    CargarCursosEnDataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un curso para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEditarCurso_Click_1(object sender, EventArgs e)
@@ -169,6 +233,40 @@ namespace SistemaDeAprendizaje
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void btnAdministrarMateriales_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                int cursoID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["CursoID"].Value);
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT Nombre, Apellido, Email FROM Usuarios WHERE UsuarioID = @UsuarioID";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioID", usuarioID);
+
+                        connection.Open();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string nombre = reader.GetString("Nombre");
+                                string apellido = reader.GetString("Apellido");
+                                string correo = reader.GetString("Email");
+
+                                FormAdministrarMateriales formAdministrarMateriales = new FormAdministrarMateriales(cursoID, esAdmin, usuarioID, nombre, apellido, correo);
+                                formAdministrarMateriales.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos del usuario.");
+                            }
+                        }
+                    }
+                }
             }
         }
     }

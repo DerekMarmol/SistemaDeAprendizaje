@@ -9,6 +9,8 @@ namespace SistemaDeAprendizaje
     {
         string connectionString = "Server=bofn3obbnejxfyoheir1-mysql.services.clever-cloud.com;Database=bofn3obbnejxfyoheir1;User=uh4dunztmvwgo47z;Password=uyjiJZkG5JqLtaELmvku;Port=3306;SslMode=Preferred;";
 
+        public string NombreCurso { get; internal set; }
+
         public FormAgregarCurso()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace SistemaDeAprendizaje
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            string nombreCurso = txtNombreCurso.Text;
+            NombreCurso = txtNombreCurso.Text;
             string descripcion = txtDescripcion.Text;
             string duracion = txtDuracion.Text;
             string instructor = txtInstructor.Text;
@@ -38,7 +40,7 @@ namespace SistemaDeAprendizaje
                 connection.Open();
                 string query = "INSERT INTO Cursos (NombreCurso, Descripcion, Duracion, Instructor, FechaInicio, FechaFin) " + "VALUES (@NombreCurso, @Descripcion, @Duracion, @Instructor, @FechaInicio, @FechaFin)";
                 MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@NombreCurso", nombreCurso);
+                command.Parameters.AddWithValue("@NombreCurso", NombreCurso);
                 command.Parameters.AddWithValue("@Descripcion", descripcion);
                 command.Parameters.AddWithValue("@Duracion", duracion);
                 command.Parameters.AddWithValue("@Instructor", instructor);
@@ -49,7 +51,9 @@ namespace SistemaDeAprendizaje
 
             MessageBox.Show("Curso agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            LimpiarCampos();
+            // Establecer el resultado del diálogo a OK
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void FormAgregarCurso_Load(object sender, EventArgs e)

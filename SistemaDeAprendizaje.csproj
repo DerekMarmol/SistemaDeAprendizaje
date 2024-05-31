@@ -23,7 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -139,6 +140,7 @@
     <Compile Include="CentrodeNotificaciones.Designer.cs">
       <DependentUpon>CentrodeNotificaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmailHelper.cs" />
     <Compile Include="EvaluacionYPruebas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +152,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdministarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdministarMateriales.Designer.cs">
+      <DependentUpon>FormAdministarMateriales.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAgregarCurso.cs">
       <SubType>Form</SubType>
@@ -187,6 +195,12 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerMateriales.Designer.cs">
+      <DependentUpon>FormVerMateriales.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForosYComunicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdministarMateriales.resx">
+      <DependentUpon>FormAdministarMateriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarCurso.resx">
       <DependentUpon>FormAgregarCurso.cs</DependentUpon>
@@ -222,6 +239,9 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormVerMateriales.resx">
+      <DependentUpon>FormVerMateriales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForosYComunicaciones.resx">
       <DependentUpon>ForosYComunicaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +255,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\launchSettings.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

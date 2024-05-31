@@ -38,6 +38,8 @@
             this.btnEliminarCurso = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRegistrarCurso = new System.Windows.Forms.Button();
+            this.btnAdministrarMateriales = new System.Windows.Forms.Button();
+            this.btnVerMateriales = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,7 @@
             // 
             // btnVerCursosRegistrados
             // 
-            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 400);
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 389);
             this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
             this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
             this.btnVerCursosRegistrados.TabIndex = 12;
@@ -73,9 +75,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 15);
+            this.button1.Location = new System.Drawing.Point(3, 16);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.Size = new System.Drawing.Size(133, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "Perfil De Usuario";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,9 +85,9 @@
             // 
             // btnAgregarCurso
             // 
-            this.btnAgregarCurso.Location = new System.Drawing.Point(685, 94);
+            this.btnAgregarCurso.Location = new System.Drawing.Point(670, 94);
             this.btnAgregarCurso.Name = "btnAgregarCurso";
-            this.btnAgregarCurso.Size = new System.Drawing.Size(103, 23);
+            this.btnAgregarCurso.Size = new System.Drawing.Size(118, 23);
             this.btnAgregarCurso.TabIndex = 3;
             this.btnAgregarCurso.Text = "Agregar Curso";
             this.btnAgregarCurso.UseVisualStyleBackColor = true;
@@ -93,9 +95,9 @@
             // 
             // btnEditarCurso
             // 
-            this.btnEditarCurso.Location = new System.Drawing.Point(685, 134);
+            this.btnEditarCurso.Location = new System.Drawing.Point(670, 134);
             this.btnEditarCurso.Name = "btnEditarCurso";
-            this.btnEditarCurso.Size = new System.Drawing.Size(103, 23);
+            this.btnEditarCurso.Size = new System.Drawing.Size(118, 23);
             this.btnEditarCurso.TabIndex = 4;
             this.btnEditarCurso.Text = "Editar Curso";
             this.btnEditarCurso.UseVisualStyleBackColor = true;
@@ -103,9 +105,9 @@
             // 
             // btnEliminarCurso
             // 
-            this.btnEliminarCurso.Location = new System.Drawing.Point(685, 175);
+            this.btnEliminarCurso.Location = new System.Drawing.Point(670, 175);
             this.btnEliminarCurso.Name = "btnEliminarCurso";
-            this.btnEliminarCurso.Size = new System.Drawing.Size(103, 23);
+            this.btnEliminarCurso.Size = new System.Drawing.Size(118, 23);
             this.btnEliminarCurso.TabIndex = 5;
             this.btnEliminarCurso.Text = "Eliminar Curso";
             this.btnEliminarCurso.UseVisualStyleBackColor = true;
@@ -121,13 +123,32 @@
             // 
             // btnRegistrarCurso
             // 
-            this.btnRegistrarCurso.Location = new System.Drawing.Point(685, 217);
+            this.btnRegistrarCurso.Location = new System.Drawing.Point(670, 217);
             this.btnRegistrarCurso.Name = "btnRegistrarCurso";
-            this.btnRegistrarCurso.Size = new System.Drawing.Size(103, 23);
+            this.btnRegistrarCurso.Size = new System.Drawing.Size(118, 23);
             this.btnRegistrarCurso.TabIndex = 7;
             this.btnRegistrarCurso.Text = "Registrarse";
             this.btnRegistrarCurso.UseVisualStyleBackColor = true;
             this.btnRegistrarCurso.Click += new System.EventHandler(this.btnRegistrarCurso_Click);
+            // 
+            // btnAdministrarMateriales
+            // 
+            this.btnAdministrarMateriales.Location = new System.Drawing.Point(670, 263);
+            this.btnAdministrarMateriales.Name = "btnAdministrarMateriales";
+            this.btnAdministrarMateriales.Size = new System.Drawing.Size(118, 23);
+            this.btnAdministrarMateriales.TabIndex = 8;
+            this.btnAdministrarMateriales.Text = "Administrar Materiales";
+            this.btnAdministrarMateriales.UseVisualStyleBackColor = true;
+            this.btnAdministrarMateriales.Click += new System.EventHandler(this.btnAdministrarMateriales_Click);
+            // 
+            // btnVerMateriales
+            // 
+            this.btnVerMateriales.Location = new System.Drawing.Point(670, 307);
+            this.btnVerMateriales.Name = "btnVerMateriales";
+            this.btnVerMateriales.Size = new System.Drawing.Size(118, 23);
+            this.btnVerMateriales.TabIndex = 9;
+            this.btnVerMateriales.Text = "Ver Materiales";
+            this.btnVerMateriales.UseVisualStyleBackColor = true;
             // 
             // FormCatalogoCursos
             // 
@@ -135,6 +156,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVerMateriales);
+            this.Controls.Add(this.btnAdministrarMateriales);
             this.Controls.Add(this.btnRegistrarCurso);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminarCurso);
@@ -164,5 +187,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegistrarCurso;
         private System.Windows.Forms.Button btnVerCursosRegistrados;
+        private System.Windows.Forms.Button btnAdministrarMateriales;
+        private System.Windows.Forms.Button btnVerMateriales;
     }
 }
