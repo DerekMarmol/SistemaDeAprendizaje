@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaDeAprendizaje.exe" size="241648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaDeAprendizaje.exe" size="241136">
       <assemblyIdentity name="SistemaDeAprendizaje" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8uOhcaIBjW3evN+PoXxTjnLoEkoooy4jf4+XEmj8ZKc=</dsig:DigestValue>
+        <dsig:DigestValue>KnfZC2FvO/fRiulNdcDySamsWOoIUrHHsr94f5fr6ck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
