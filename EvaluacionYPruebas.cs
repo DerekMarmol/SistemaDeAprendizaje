@@ -287,5 +287,10 @@ namespace SistemaDeAprendizaje
             public string Texto { get; set; }
             public string RespuestaCorrecta { get; set; }
         }
+
+        private void txtNuevaRespuesta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
