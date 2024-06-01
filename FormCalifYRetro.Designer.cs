@@ -33,15 +33,17 @@
             this.dtgCalificaciones = new System.Windows.Forms.DataGridView();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonG = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCalificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 75);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(120, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Estudiante";
             // 
@@ -58,7 +60,9 @@
             // 
             // dtgCalificaciones
             // 
+            this.dtgCalificaciones.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dtgCalificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCalificaciones.GridColor = System.Drawing.Color.Thistle;
             this.dtgCalificaciones.Location = new System.Drawing.Point(126, 128);
             this.dtgCalificaciones.Name = "dtgCalificaciones";
             this.dtgCalificaciones.Size = new System.Drawing.Size(503, 150);
@@ -68,7 +72,7 @@
             // ComboBox1
             // 
             this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(201, 67);
+            this.ComboBox1.Location = new System.Drawing.Point(222, 67);
             this.ComboBox1.Name = "ComboBox1";
             this.ComboBox1.Size = new System.Drawing.Size(249, 21);
             this.ComboBox1.TabIndex = 21;
@@ -84,11 +88,23 @@
             this.buttonG.UseVisualStyleBackColor = true;
             this.buttonG.Click += new System.EventHandler(this.buttonG_Click_1);
             // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(240, 345);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 23;
+            this.buttonAdd.Text = "Agregar";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
             // CalifYRetro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonG);
             this.Controls.Add(this.ComboBox1);
             this.Controls.Add(this.dtgCalificaciones);
@@ -109,5 +125,6 @@
         private System.Windows.Forms.DataGridView dtgCalificaciones;
         private System.Windows.Forms.ComboBox ComboBox1;
         private System.Windows.Forms.Button buttonG;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }

@@ -210,5 +210,17 @@ namespace SistemaDeAprendizaje
             CalifYRetro formCalificaciones = new CalifYRetro();
             formCalificaciones.Show();
         }
+
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            FormCrearGrupo frmCrearGrupo = new FormCrearGrupo();
+            frmCrearGrupo.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormReportes frmReportes = new FormReportes();
+            frmReportes.Show();
+        }
     }
 }

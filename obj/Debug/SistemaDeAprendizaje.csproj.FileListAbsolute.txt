@@ -135,3 +135,6 @@ C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaD.
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.exe
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.pdb
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.CalifYRetro.resources
+C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.FormCrearGrupo.resources
+C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.FormReportes.resources
+C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.FormAsignaGrupoProy.resources

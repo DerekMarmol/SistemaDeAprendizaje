@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCalificaciones = new System.Windows.Forms.Button();
             this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCambiarImagen = new System.Windows.Forms.Button();
@@ -42,13 +43,16 @@
             this.lblPerfilCorreo = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
-            this.btnCalificaciones = new System.Windows.Forms.Button();
+            this.btnGrupos = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnGrupos);
             this.panel1.Controls.Add(this.btnCalificaciones);
             this.panel1.Controls.Add(this.btnVerCursosRegistrados);
             this.panel1.Controls.Add(this.button1);
@@ -56,6 +60,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 426);
             this.panel1.TabIndex = 1;
+            // 
+            // btnCalificaciones
+            // 
+            this.btnCalificaciones.Location = new System.Drawing.Point(26, 61);
+            this.btnCalificaciones.Name = "btnCalificaciones";
+            this.btnCalificaciones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnCalificaciones.Size = new System.Drawing.Size(121, 23);
+            this.btnCalificaciones.TabIndex = 11;
+            this.btnCalificaciones.Text = "Calificaciones";
+            this.btnCalificaciones.UseVisualStyleBackColor = true;
+            this.btnCalificaciones.Click += new System.EventHandler(this.btnCalificaciones_Click);
             // 
             // btnVerCursosRegistrados
             // 
@@ -179,16 +194,25 @@
             this.pictureBoxImage.TabStop = false;
             this.pictureBoxImage.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnCalificaciones
+            // btnGrupos
             // 
-            this.btnCalificaciones.Location = new System.Drawing.Point(26, 61);
-            this.btnCalificaciones.Name = "btnCalificaciones";
-            this.btnCalificaciones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCalificaciones.Size = new System.Drawing.Size(121, 23);
-            this.btnCalificaciones.TabIndex = 11;
-            this.btnCalificaciones.Text = "Calificaciones";
-            this.btnCalificaciones.UseVisualStyleBackColor = true;
-            this.btnCalificaciones.Click += new System.EventHandler(this.btnCalificaciones_Click);
+            this.btnGrupos.Location = new System.Drawing.Point(26, 101);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Size = new System.Drawing.Size(121, 23);
+            this.btnGrupos.TabIndex = 12;
+            this.btnGrupos.Text = "Grupos";
+            this.btnGrupos.UseVisualStyleBackColor = true;
+            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(26, 145);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Reportes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormInicio
             // 
@@ -233,5 +257,7 @@
         private System.Windows.Forms.Button btnVerCursosRegistrados;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.Button btnCalificaciones;
+        private System.Windows.Forms.Button btnGrupos;
+        private System.Windows.Forms.Button button2;
     }
 }
