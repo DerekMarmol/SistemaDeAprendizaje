@@ -14,7 +14,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <dsig:DigestValue>w2QSXqbMMpyFDFUZianyEFKpo7FFG8T+qA0FSm+j7CY=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>yadR+KLWuxTK9bi5VH2Q/oIpY0Rr7egJQMZVEs24pDk=</dsig:DigestValue>
+>>>>>>> parent of f566a00 (Agregando edición de calificaciones)
+=======
         <dsig:DigestValue>3MBEbLCkocRl65/QPgW3bOuJhDC21JXouM4uEXRRNWs=</dsig:DigestValue>
+>>>>>>> 048ae82d7766a8b38f4b7ec6792a047b16f50b2a
+=======
+        <dsig:DigestValue>3MBEbLCkocRl65/QPgW3bOuJhDC21JXouM4uEXRRNWs=</dsig:DigestValue>
+>>>>>>> 048ae82d7766a8b38f4b7ec6792a047b16f50b2a
       </hash>
     </dependentAssembly>
   </dependency>

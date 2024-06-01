@@ -49,7 +49,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnCalificaciones);
             this.panel1.Controls.Add(this.btnVerCursosRegistrados);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -230,6 +229,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVerCursosRegistrados;
         private System.Windows.Forms.PictureBox pictureBoxImage;
-        private System.Windows.Forms.Button btnCalificaciones;
     }
 }
