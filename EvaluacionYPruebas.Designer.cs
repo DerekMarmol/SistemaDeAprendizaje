@@ -172,6 +172,7 @@
             this.txtNuevaRespuesta.Name = "txtNuevaRespuesta";
             this.txtNuevaRespuesta.Size = new System.Drawing.Size(635, 20);
             this.txtNuevaRespuesta.TabIndex = 3;
+            this.txtNuevaRespuesta.TextChanged += new System.EventHandler(this.txtNuevaRespuesta_TextChanged);
             // 
             // label1
             // 
