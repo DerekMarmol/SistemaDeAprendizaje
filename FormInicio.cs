@@ -209,14 +209,5 @@ namespace SistemaDeAprendizaje
         {
             throw new NotImplementedException();
         }
-<<<<<<< HEAD
-
-        private void btnCalificaciones_Click(object sender, EventArgs e)
-        {
-            CalifYRetro formCalifYRetro = new CalifYRetro(nombre, apellido, correo, cursoID, esAdmin, usuarioID);
-            formCalifYRetro.Show();
-        }
-=======
->>>>>>> parent of f566a00 (Agregando edición de calificaciones)
     }
 }

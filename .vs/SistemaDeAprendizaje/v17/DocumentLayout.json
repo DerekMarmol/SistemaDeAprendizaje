@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|c:\\users\\enyt9\\source\\repos\\sistemadeaprendizaje\\formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A08ABAEC-927C-469C-BDE3-A7A28A26EEE7}|SistemaDeAprendizaje.csproj|solutionrelative:formagregarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "ToolTip": "C:\\Users\\Enyt9\\source\\repos\\SistemaDeAprendizaje\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T00:08:13.635Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-06-01T00:08:13.635Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAHoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T00:08:28.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T00:08:28.059Z"
             }
           ]
         }
