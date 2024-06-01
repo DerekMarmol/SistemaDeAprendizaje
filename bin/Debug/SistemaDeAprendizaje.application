@@ -7,14 +7,18 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SistemaDeAprendizaje.exe.manifest" size="16245">
+    <dependentAssembly dependencyType="install" codebase="SistemaDeAprendizaje.exe.manifest" size="16317">
       <assemblyIdentity name="SistemaDeAprendizaje.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>i+WF3/GLFOdpEGvzH1lNcSVIF1bFzfPjpaGbdzaSyCM=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>sKkY6YRTdWNoPPeBcL0kXosTz9zAoaCz0PAsRSjMOaE=</dsig:DigestValue>
+>>>>>>> de11e688a46e8e946d86a7355981979769225927
       </hash>
     </dependentAssembly>
   </dependency>

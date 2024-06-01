@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the
-          requestedExecutionLevel node with one of the following.
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward
-         compatibility then delete the requestedExecutionLevel node.
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -138,14 +138,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaDeAprendizaje.exe" size="285168">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaDeAprendizaje.exe" size="228336">
+>>>>>>> de11e688a46e8e946d86a7355981979769225927
       <assemblyIdentity name="SistemaDeAprendizaje" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>WVkWc51lW4Zdl5ul4fFs3hL902mfajWFIleyrAEZO/U=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>1VaknwmhXWz+n86qAF2Tqnmhbqpe1AepJSJmeFfCeAA=</dsig:DigestValue>
+>>>>>>> de11e688a46e8e946d86a7355981979769225927
       </hash>
     </dependentAssembly>
   </dependency>

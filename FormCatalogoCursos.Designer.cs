@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCatalogoCursos));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEvaluacionesYPruebas = new System.Windows.Forms.Button();
             this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarCurso = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEvaluacionesYPruebas);
             this.panel1.Controls.Add(this.btnVerCursosRegistrados);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(4, 12);
@@ -63,9 +65,19 @@
             this.panel1.Size = new System.Drawing.Size(144, 426);
             this.panel1.TabIndex = 2;
             // 
+            // btnEvaluacionesYPruebas
+            // 
+            this.btnEvaluacionesYPruebas.Location = new System.Drawing.Point(3, 76);
+            this.btnEvaluacionesYPruebas.Name = "btnEvaluacionesYPruebas";
+            this.btnEvaluacionesYPruebas.Size = new System.Drawing.Size(133, 23);
+            this.btnEvaluacionesYPruebas.TabIndex = 13;
+            this.btnEvaluacionesYPruebas.Text = "Evaluaciones";
+            this.btnEvaluacionesYPruebas.UseVisualStyleBackColor = true;
+            this.btnEvaluacionesYPruebas.Click += new System.EventHandler(this.btnEvaluacionesYPruebas_Click);
+            // 
             // btnVerCursosRegistrados
             // 
-            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(6, 389);
+            this.btnVerCursosRegistrados.Location = new System.Drawing.Point(3, 47);
             this.btnVerCursosRegistrados.Name = "btnVerCursosRegistrados";
             this.btnVerCursosRegistrados.Size = new System.Drawing.Size(135, 23);
             this.btnVerCursosRegistrados.TabIndex = 12;
@@ -133,7 +145,7 @@
             // 
             // btnAdministrarMateriales
             // 
-            this.btnAdministrarMateriales.Location = new System.Drawing.Point(670, 263);
+            this.btnAdministrarMateriales.Location = new System.Drawing.Point(670, 298);
             this.btnAdministrarMateriales.Name = "btnAdministrarMateriales";
             this.btnAdministrarMateriales.Size = new System.Drawing.Size(118, 23);
             this.btnAdministrarMateriales.TabIndex = 8;
@@ -143,12 +155,13 @@
             // 
             // btnVerMateriales
             // 
-            this.btnVerMateriales.Location = new System.Drawing.Point(670, 307);
+            this.btnVerMateriales.Location = new System.Drawing.Point(670, 258);
             this.btnVerMateriales.Name = "btnVerMateriales";
             this.btnVerMateriales.Size = new System.Drawing.Size(118, 23);
             this.btnVerMateriales.TabIndex = 9;
             this.btnVerMateriales.Text = "Ver Materiales";
             this.btnVerMateriales.UseVisualStyleBackColor = true;
+            this.btnVerMateriales.Click += new System.EventHandler(this.btnVerMateriales_Click);
             // 
             // FormCatalogoCursos
             // 
@@ -189,5 +202,6 @@
         private System.Windows.Forms.Button btnVerCursosRegistrados;
         private System.Windows.Forms.Button btnAdministrarMateriales;
         private System.Windows.Forms.Button btnVerMateriales;
+        private System.Windows.Forms.Button btnEvaluacionesYPruebas;
     }
 }

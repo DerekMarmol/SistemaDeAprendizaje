@@ -45,7 +45,7 @@ namespace SistemaDeAprendizaje
             }
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
@@ -118,7 +118,7 @@ namespace SistemaDeAprendizaje
             }
         }
 
-        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        private void btnIniciarSesion_Click_1(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
             string contraseñaIngresada = txtContraseña.Text;

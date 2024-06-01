@@ -13,6 +13,11 @@ namespace SistemaDeAprendizaje
         private bool esAdmin;
         private int usuarioID;
 
+        public string nombre { get; private set; }
+        public string apellido { get; private set; }
+        public string correo { get; private set; }
+        public int cursoID { get; private set; }
+
         public FormInicio(bool esAdmin, int usuarioID, string nombre, string apellido, string correo)
         {
             InitializeComponent();
@@ -204,6 +209,7 @@ namespace SistemaDeAprendizaje
         {
             throw new NotImplementedException();
         }
+<<<<<<< HEAD
 
         private void btnCalificaciones_Click(object sender, EventArgs e)
         {
@@ -222,5 +228,7 @@ namespace SistemaDeAprendizaje
             FormReportes frmReportes = new FormReportes();
             frmReportes.Show();
         }
+=======
+>>>>>>> de11e688a46e8e946d86a7355981979769225927
     }
 }

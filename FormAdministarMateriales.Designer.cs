@@ -39,6 +39,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEliminarMaterial = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +98,7 @@
             // lblRutaArchivo
             // 
             this.lblRutaArchivo.AutoSize = true;
-            this.lblRutaArchivo.Location = new System.Drawing.Point(681, 105);
+            this.lblRutaArchivo.Location = new System.Drawing.Point(613, 99);
             this.lblRutaArchivo.Name = "lblRutaArchivo";
             this.lblRutaArchivo.Size = new System.Drawing.Size(0, 13);
             this.lblRutaArchivo.TabIndex = 6;
@@ -119,6 +120,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Catalogo De Cursos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -140,12 +142,23 @@
             this.btnEliminarMaterial.UseVisualStyleBackColor = true;
             this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(259, 37);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(97, 13);
+            this.lblStatus.TabIndex = 9;
+            this.lblStatus.Text = "Espere, por favor...";
+            this.lblStatus.Visible = false;
+            // 
             // FormAdministrarMateriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnEliminarMaterial);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblRutaArchivo);
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button btnEliminarMaterial;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
