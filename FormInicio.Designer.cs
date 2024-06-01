@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCalificaciones = new System.Windows.Forms.Button();
             this.btnVerCursosRegistrados = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCambiarImagen = new System.Windows.Forms.Button();
@@ -55,17 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 426);
             this.panel1.TabIndex = 1;
-            // 
-            // btnCalificaciones
-            // 
-            this.btnCalificaciones.Location = new System.Drawing.Point(26, 61);
-            this.btnCalificaciones.Name = "btnCalificaciones";
-            this.btnCalificaciones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCalificaciones.Size = new System.Drawing.Size(121, 23);
-            this.btnCalificaciones.TabIndex = 11;
-            this.btnCalificaciones.Text = "Calificaciones";
-            this.btnCalificaciones.UseVisualStyleBackColor = true;
-            this.btnCalificaciones.Click += new System.EventHandler(this.btnCalificaciones_Click);
             // 
             // btnVerCursosRegistrados
             // 
