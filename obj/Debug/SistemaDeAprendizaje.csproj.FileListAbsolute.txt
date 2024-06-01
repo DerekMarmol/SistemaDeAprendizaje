@@ -138,6 +138,6 @@ C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDe
 C:\Users\devja\source\repos\aulloa99\P.F Progra l\New folder\obj\Debug\SistemaDeAprendizaje.CalifYRetro.resources
 C:\Users\Enyt9\source\repos\SistemaDeAprendizaje\obj\Debug\SistemaDeAprendizaje.CalifYRetro.resources
 =======
->>>>>>> parent of f566a00 (Agregando edición de calificaciones)
+>>>>>>> parent of f566a00 (Agregando edici�n de calificaciones)
 >>>>>>> f566a00971221760e48613d3e28d2cdc533c0ae1
 >>>>>>> 048ae82d7766a8b38f4b7ec6792a047b16f50b2a
